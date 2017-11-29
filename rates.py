@@ -3,17 +3,15 @@ import requests
 
 def fetch_bitcoin():
 
-	#debug
-	print("--------------->")
-
 	#url with current course
 	url = "https://www.coingecko.com/en/price_charts/bitcoin/usd"
 	headers = {'User-Agent':'Mozilla/5.0'}
 	bitcoin_file = requests.get(url)
-
+	
 	#debug
-	print("---------------->")
-	print (bitcoin_file.text)
+	file = open('debug.txt','w')
+	file.write(bitcoin_file.text)
+	file.close()
 
 	#create soup object
 	soup = BeautifulSoup(bitcoin_file.text, "html.parser")

@@ -2,7 +2,13 @@ import notify2
 import rates
 
 def notify():
-	ICON_PATH = "/Home/Scripts/Btcalert/btcalert/btcusd.jpg"
+	ICON_PATH = "/Home/deleted:    btcalert/__pycache__/rates.cpython-36.pyc
+	deleted:    btcalert/btcalert.py
+	deleted:    btcalert/btcusd.jpg
+	deleted:    btcalert/btcusd.png
+	deleted:    btcalert/debug.txt
+	deleted:    btcalert/rates.py
+btcusd.jpg"
 
 	#get current course
 	bitcoin = rates.fetch_bitcoin()
