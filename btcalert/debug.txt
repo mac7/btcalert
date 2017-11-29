@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"035a448c8e","applicationID":"63019027","transactionName":"dg5XEUYNWVtdQRdDF1wCXDpXClRFTEAXQA1aFg==","queueTime":1,"applicationTime":736,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49392197-1', 'coingecko.com');
+  ga('send', 'pageview');
+
+  </script>
+<link rel="shortcut icon" href="/favicon.ico">
+<title>Bitcoin Price Chart (BTC/USD) | CoinGecko</title>
+<meta name="description" content="Bitcoin price and historical price chart (BTC/USD)" />
+
+<meta property="og:title" content="Bitcoin Price Chart (BTC/USD) | CoinGecko">
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Bitcoin price and historical price chart (BTC/USD)">
+<meta property="og:image" content="https://www.coingecko.com/assets/coin-250/bitcoin-275d9fd6d2a3b541c479c205285f44c8695a303c075569b350c697ca7b6ab313.png">
+<meta property="og:site_name" content="CoinGecko">
+<link rel="alternate" hreflang="en" href="https://www.coingecko.com/en/price_charts/bitcoin/usd" />
+<link rel="alternate" hreflang="zh" href="https://www.coingecko.com/zh/%E4%BB%B7%E6%A0%BC%E5%9B%BE/%E6%AF%94%E7%89%B9%E5%B8%81/usd" />
+<link rel="alternate" hreflang="zh-tw" href="https://www.coingecko.com/zh-tw/%E5%8C%AF%E7%8E%87%E5%9C%96/%E6%AF%94%E7%89%B9%E5%B9%A3/usd" />
+<link rel="alternate" hreflang="de" href="https://www.coingecko.com/de/kurs_chart/bitcoin/usd" />
+<link rel="alternate" hreflang="fr" href="https://www.coingecko.com/fr/graphiques_cours/bitcoin/usd" />
+<link rel="alternate" hreflang="es" href="https://www.coingecko.com/es/tabla_de_precios/bitcoin/usd" />
+<link rel="alternate" hreflang="ja" href="https://www.coingecko.com/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3/usd" />
+<link rel="alternate" hreflang="id" href="https://www.coingecko.com/id/grafik_harga/bitcoin/usd" />
+<link rel="alternate" hreflang="ru" href="https://www.coingecko.com/ru/%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0_%D1%86%D0%B5%D0%BD/%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0/usd" />
+<link rel="alternate" hreflang="ko" href="https://www.coingecko.com/ko/%EC%8B%9C%EC%84%B8%EC%B0%A8%ED%8A%B8/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8/usd" />
+<link rel="alternate" hreflang="ar" href="https://www.coingecko.com/ar/%D9%85%D8%AE%D8%B7%D8%B7%D8%A7%D8%AA_%D8%A7%D9%84%D8%B3%D8%B9%D8%B1/%D8%A8%D9%8A%D8%AA%D9%83%D9%88%D9%8A%D9%86/usd" />
+<link rel="alternate" hreflang="th" href="https://www.coingecko.com/th/%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F_%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2/%E0%B8%9A%E0%B8%B4%E0%B8%95%E0%B8%84%E0%B8%AD%E0%B8%A2%E0%B8%99%E0%B9%8C/usd" />
+<link rel="alternate" hreflang="vi" href="https://www.coingecko.com/vi/b%E1%BA%A3ng_gi%C3%A1/bitcoin/usd" />
+<link rel="alternate" hreflang="it" href="https://www.coingecko.com/it/grafici_del_prezzo/bitcoin/usd" />
+<link rel="alternate" hreflang="pt" href="https://www.coingecko.com/pt/gr%C3%A1ficos_de_pre%C3%A7os/bitcoin/usd" />
+<link rel="stylesheet" media="all" href="https://www.coingecko.com/assets/application-d59f62bfa6c78bfd01ce003016c64efb89ee4f6db4683af79faa66b1a6a9d40b.css" />
+<script src="https://www.coingecko.com/assets/application-9a4f0fe6fb5a5915d6641f9ef75b6c81b5b5acc623748b4ee546cc395d11209f.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1745315063020550",
+      enable_page_level_ads: true
+    });
+  </script>
+
+<script src="//cdn-s2s.buysellads.net/pub/coingecko.js" data-cfasync="false"></script>
+<script type="text/javascript" src="//m.servedby-buysellads.com/monetization.js"></script>
+<script src='https://www.google.com/recaptcha/api.js' async></script>
+</head>
+<body>
+<script>
+  (function(){
+    if(typeof _bsa !== 'undefined' && _bsa) {
+      _bsa.init('fancybar', 'CKYDV2QM', 'placement:coingecko');
+    }
+  })();
+  </script>
+<script>
+  $('meta[name=csrf-param]').remove()
+  $('meta[name=csrf-token]').remove()
+  $.getJSON('/csrf_meta.json').then(function(json){
+    $('<meta>').attr('name', "csrf-param").attr('content', json.param).appendTo('head');
+    $('<meta>').attr('name', 'csrf-token').attr('content', json.token).appendTo('head');
+  });
+  $.getScript('/en/accounts/current.js')
+</script>
+<style>
+.xenio-banner-2 {
+    position: relative;
+    display: block;
+    height: 94px;
+    background: #0c132b url('https://www.coingecko.com/assets/xenio-bg-2-c06d0b3295869874527cd833dbecae0d15694b0220936c89a543e8215c19d2dc.jpg') no-repeat center;
+    background-size: auto 94px;
+    text-decoration: none;
+}
+
+.xenio-banner-2-narrow {
+    position: relative;
+    display: block;
+    max-width: 758px;
+    height: 94px;
+    margin: 0 auto;
+}
+
+.xenio-banner-2-text1 {
+    position: absolute;
+    top: 50%; left: 16.6%;
+    color: #00d8ff;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    -webkit-transform: translate(0, -43%);
+       -moz-transform: translate(0, -43%);
+        -ms-transform: translate(0, -43%);
+         -o-transform: translate(0, -43%);
+            transform: translate(0, -48%);
+}
+
+.xenio-banner-2-text1 h2 {
+    margin: 0 0 2px 0;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.xenio-banner-2-text1 h2 span {
+    display: block;
+    margin-bottom: -1px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+}
+
+.xenio-banner-2-text2 {
+    position: absolute;
+    top: 50%;
+    left: 33.8%;
+    padding: 0 20px 0 63px;
+    color: #dff6ff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.012em;
+    -webkit-transform: translate(0, -44%);
+       -moz-transform: translate(0, -44%);
+        -ms-transform: translate(0, -44%);
+         -o-transform: translate(0, -44%);
+            transform: translate(0, -48%);
+    background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDM4LjUgNDI3LjgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQzOC41IDQyNy44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojRkZGO30NCjwvc3R5bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDA5LjEsMTA5LjJjLTE5LjYtMzMuNi00Ni4yLTYwLjItNzkuOC03OS44QzI5NS43LDkuOCwyNTkuMSwwLDIxOS4zLDBjLTM5LjgsMC03Ni41LDkuOC0xMTAuMSwyOS40DQoJQzc1LjYsNDksNDksNzUuNiwyOS40LDEwOS4yQzkuOCwxNDIuOCwwLDE3OS41LDAsMjE5LjNDMCwyNjcsMTMuOSwzMTAsNDEuOCwzNDguMmMyNy45LDM4LjIsNjMuOSw2NC42LDEwOC4xLDc5LjINCgljNS4xLDEsOC45LDAuMywxMS40LTJjMi41LTIuMywzLjctNS4xLDMuNy04LjZjMC0wLjYsMC01LjctMC4xLTE1LjRjLTAuMS05LjctMC4xLTE4LjItMC4xLTI1LjRsLTYuNiwxLjFjLTQuMiwwLjgtOS41LDEuMS0xNS44LDENCgljLTYuNC0wLjEtMTMtMC44LTE5LjgtMmMtNi45LTEuMi0xMy4yLTQuMS0xOS4xLTguNmMtNS45LTQuNS0xMC4xLTEwLjMtMTIuNi0xNy42bC0yLjktNi42Yy0xLjktNC40LTQuOS05LjItOS0xNC42DQoJYy00LjEtNS4zLTguMi04LjktMTIuNC0xMC44bC0yLTEuNGMtMS4zLTEtMi42LTIuMS0zLjctMy40Yy0xLjEtMS4zLTItMi43LTIuNi00Yy0wLjYtMS4zLTAuMS0yLjQsMS40LTMuM3M0LjMtMS4zLDguMy0xLjNsNS43LDAuOQ0KCWMzLjgsMC44LDguNSwzLDE0LjEsNi45YzUuNiwzLjgsMTAuMiw4LjgsMTMuOCwxNC44YzQuNCw3LjgsOS43LDEzLjgsMTUuOCwxNy44YzYuMiw0LjEsMTIuNCw2LjEsMTguNyw2LjFzMTEuNy0wLjUsMTYuMy0xLjQNCgljNC42LTEsOC44LTIuNCwxMi44LTQuM2MxLjctMTIuOCw2LjQtMjIuNiwxNC0yOS40Yy0xMC44LTEuMS0yMC42LTIuOS0yOS4zLTUuMWMtOC43LTIuMy0xNy42LTYtMjYuOC0xMS4xDQoJYy05LjItNS4xLTE2LjktMTEuNS0yMy0xOS4xYy02LjEtNy42LTExLjEtMTcuNi0xNS0zMGMtMy45LTEyLjQtNS45LTI2LjYtNS45LTQyLjhjMC0yMyw3LjUtNDIuNiwyMi42LTU4LjgNCgljLTctMTcuMy02LjQtMzYuNywyLTU4LjJjNS41LTEuNywxMy43LTAuNCwyNC42LDMuOWMxMC45LDQuMywxOC44LDgsMjMuOCwxMWM1LDMsOS4xLDUuNiwxMi4xLDcuN2MxNy43LTQuOSwzNi03LjQsNTQuOC03LjQNCglzMzcuMSwyLjUsNTQuOCw3LjRsMTAuOC02LjhjNy40LTQuNiwxNi4yLTguOCwyNi4zLTEyLjZjMTAuMS0zLjgsMTcuOC00LjksMjMuMS0zLjFjOC42LDIxLjUsOS4zLDQwLjksMi4zLDU4LjINCgljMTUsMTYuMiwyMi42LDM1LjgsMjIuNiw1OC44YzAsMTYuMi0yLDMwLjUtNS45LDQzYy0zLjksMTIuNS04LjksMjIuNS0xNS4xLDMwYy02LjIsNy41LTEzLjksMTMuOS0yMy4xLDE5DQoJYy05LjIsNS4xLTE4LjIsOC45LTI2LjgsMTEuMWMtOC43LDIuMy0xOC40LDQtMjkuMyw1LjFjOS45LDguNiwxNC44LDIyLjEsMTQuOCw0MC41djYwLjJjMCwzLjQsMS4yLDYuMywzLjYsOC42DQoJYzIuNCwyLjMsNi4xLDMsMTEuMywyYzQ0LjItMTQuNyw4MC4yLTQxLjEsMTA4LjEtNzkuMmMyNy45LTM4LjIsNDEuOC04MS4xLDQxLjgtMTI4LjlDNDM4LjUsMTc5LjUsNDI4LjcsMTQyLjgsNDA5LjEsMTA5LjJ6Ii8+DQo8L3N2Zz4=) no-repeat 0 center;
+    background-size: 42px auto;
+}
+
+.xenio-banner-2-text2 span {
+    display: block;
+    color: #b4c0d1;
+    font-size: 16px;
+    letter-spacing: 0.076em;
+}
+
+@media screen and (max-width: 760px) {
+    .xenio-banner-2 {
+        position: relative;
+        display: block;
+        height: 94px;
+        background: #0c132b url('https://www.coingecko.com/assets/xenio-bg-1-8b03ba55bd2dd8c224d305819d1c34e82f8204784ad2b0c6634de03f075423ae.jpg') no-repeat ;
+        background-size: auto 94px;
+        text-decoration: none;
+    }
+    .xenio-banner-2-text2 {
+        left: 38.8%;
+        height: 46px;
+        padding: 0 20px 0 53px;
+    }
+    .xenio-banner-2-text2 span {
+        display: block;
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .xenio-banner-2-text2 {
+        display: none;
+    }
+    .xenio-banner-2-text2 span {
+        display: none;
+    }
+    .xenio-banner-2-text1 {
+        left: 34%;
+    }
+}
+
+.icobanner {
+  background-color: #0080be;
+  display: block;
+}
+.icobannercontainer {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.bannercreative {
+  width: 100%;
+  display: block;
+}
+.icotimer {
+  position: absolute;
+  left: 300px;
+  top: 18px;
+  color: #fff;
+  font-weight: 300;
+  font-family: helvetica;
+  text-align: center;
+}
+.icotimerdesc {
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+}
+.icotimercontainer {
+  white-space: nowrap;
+  display: inline-block;
+  margin-left:15px;
+}
+.icobutton {
+  position: absolute;
+  right: 0px;
+  top: 24px;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color:#51b030;
+  border-color:#51b030;
+  color: #fff;
+}
+.icobutton:hover {
+  transform: scale(1);
+  background-color:#51b030);
+  border-color:#51b030;
+  color: #fff;
+}
+.icobanner{
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+<div id="top-ico-banner" style="display:none;">
+<a href="https://xenio.io?ref=coingecko" rel="noopener noreferrer nofollow" target="_blank" class="xenio-banner-2">
+<span class="xenio-banner-2-narrow">
+<span class="xenio-banner-2-text1">
+<h2><span>Xenio</span> Blockchain</h2>
+Proof-of-Networking
+</span>
+<span class="xenio-banner-2-text2">
+Decentralized & distributed gaming platform and blockchain
+<span>Blockchain source available on github</span>
+</span>
+</span>
+</a>
+<div id="top-ico-banner-close" style='
+    color: #ffffff; padding: 5px 10px; position: absolute; top: 5px; right: 5px;
+    cursor: pointer; font-size: 18px;'><i class="fa fa-times-circle"></i>
+</div>
+</div>
+<div id="wrapper">
+<div class="header dashboard">
+<div class="logo container">
+<div class="row">
+<div class="col-md-4">
+<div class="main-logo">
+<a href="/en">
+<img alt="CoinGecko Logo" width="145px" height="40px" src="https://www.coingecko.com/assets/coingecko-logo-920e592635f3fb66a1a30e6bc47e026c10d814ecab489ace1f950bc791ab84e9.png" />
+</a> </div>
+</div>
+<div class="col-md-8 right-panel desktop">
+<div class="top-header-right">
+<ul class="menu-top-header-menu">
+<span class='user-navigation'></span>
+<li class="divider"></li>
+<li class="language">
+<a href="#" data-toggle="dropdown">English <span class="fa fa-caret-down"></span></a>
+<ul class="dropdown-menu ">
+<li><a class="" href="/en/price_charts/bitcoin/usd">English</a></li>
+<li><a class="" href="/es/tabla_de_precios/bitcoin/usd">Español</a></li>
+<li><a class="" href="/de/kurs_chart/bitcoin/usd">Deutsch</a></li>
+<li><a class="" href="/pt/gr%C3%A1ficos_de_pre%C3%A7os/bitcoin/usd">Português</a></li>
+<li><a class="" href="/fr/graphiques_cours/bitcoin/usd">Français</a></li>
+<li><a class="" href="/it/grafici_del_prezzo/bitcoin/usd">Italiano</a></li>
+<li><a class="" href="/id/grafik_harga/bitcoin/usd">Bahasa Indonesia</a></li>
+<li><a class="" href="/zh/%E4%BB%B7%E6%A0%BC%E5%9B%BE/%E6%AF%94%E7%89%B9%E5%B8%81/usd">简体中文</a></li>
+<li><a class="" href="/zh-tw/%E5%8C%AF%E7%8E%87%E5%9C%96/%E6%AF%94%E7%89%B9%E5%B9%A3/usd">繁體中文</a></li>
+<li><a class="" href="/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3/usd">日本語</a></li>
+<li><a class="" href="/ko/%EC%8B%9C%EC%84%B8%EC%B0%A8%ED%8A%B8/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8/usd">한국어</a></li>
+<li><a class="" href="/ru/%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0_%D1%86%D0%B5%D0%BD/%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0/usd">ру́сский</a></li>
+<li><a class="" href="/ar/%D9%85%D8%AE%D8%B7%D8%B7%D8%A7%D8%AA_%D8%A7%D9%84%D8%B3%D8%B9%D8%B1/%D8%A8%D9%8A%D8%AA%D9%83%D9%88%D9%8A%D9%86/usd">العربية</a></li>
+<li><a class="" href="/th/%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F_%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2/%E0%B8%9A%E0%B8%B4%E0%B8%95%E0%B8%84%E0%B8%AD%E0%B8%A2%E0%B8%99%E0%B9%8C/usd">ภาษาไทย</a></li>
+<li><a class="" href="/vi/b%E1%BA%A3ng_gi%C3%A1/bitcoin/usd">Tiếng việt</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="language-mobile">
+<a href="#" data-toggle="collapse" data-target="#language-mobile"><i class="fa fa-globe" aria-hidden="true"></i></a>
+</div>
+<div class="main-menu mobile">
+<nav class="coingecko navbar navbar-light navbar-toggleable-md menu">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse nav-menu" id="containerNavbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a class="nav-link" href="/en">Chart</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/en/crypto_index/crix">
+CRIX
+</a> </li>
+<li class="nav-item">
+<a class="nav-link" href="/ico?locale=en">
+ICO <span class="label label-orange">Beta</span>
+</a> </li>
+<li class="nav-item">
+<a class="nav-link" href="/en/commodities">
+Commodities
+</a> </li>
+<li class="nav-item">
+<a class="nav-link" href="/buzz?locale=en">
+Buzz
+</a> </li>
+<li class="nav-item">
+<a class="nav-link" href="/en/about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/en/faq">FAQ</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/en/methodology">Methodology</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/coingecko-advertising.pdf">Advertising</a>
+</li>
+<span class='user-navigation'></span>
+</ul>
+</div>
+</nav>
+</div>
+<div class="coingecko collapse navbar-collapse nav-menu" id="language-mobile">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="/en/price_charts/bitcoin/usd">English</a></li>
+<li class="nav-item"><a class="nav-link" href="/es/tabla_de_precios/bitcoin/usd">Español</a></li>
+<li class="nav-item"><a class="nav-link" href="/de/kurs_chart/bitcoin/usd">Deutsch</a></li>
+<li class="nav-item"><a class="nav-link" href="/pt/gr%C3%A1ficos_de_pre%C3%A7os/bitcoin/usd">Português</a></li>
+<li class="nav-item"><a class="nav-link" href="/fr/graphiques_cours/bitcoin/usd">Français</a></li>
+<li class="nav-item"><a class="nav-link" href="/it/grafici_del_prezzo/bitcoin/usd">Italiano</a></li>
+<li class="nav-item"><a class="nav-link" href="/id/grafik_harga/bitcoin/usd">Bahasa Indonesia</a></li>
+<li class="nav-item"><a class="nav-link" href="/zh/%E4%BB%B7%E6%A0%BC%E5%9B%BE/%E6%AF%94%E7%89%B9%E5%B8%81/usd">简体中文</a></li>
+<li class="nav-item"><a class="nav-link" href="/zh-tw/%E5%8C%AF%E7%8E%87%E5%9C%96/%E6%AF%94%E7%89%B9%E5%B9%A3/usd">繁體中文</a></li>
+<li class="nav-item"><a class="nav-link" href="/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3/usd">日本語</a></li>
+<li class="nav-item"><a class="nav-link" href="/ko/%EC%8B%9C%EC%84%B8%EC%B0%A8%ED%8A%B8/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8/usd">한국어</a></li>
+<li class="nav-item"><a class="nav-link" href="/ru/%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0_%D1%86%D0%B5%D0%BD/%D0%B1%D0%B8%D1%82%D0%BA%D0%BE%D0%B8%D0%BD%D0%B0/usd">ру́сский</a></li>
+<li class="nav-item"><a class="nav-link" href="/ar/%D9%85%D8%AE%D8%B7%D8%B7%D8%A7%D8%AA_%D8%A7%D9%84%D8%B3%D8%B9%D8%B1/%D8%A8%D9%8A%D8%AA%D9%83%D9%88%D9%8A%D9%86/usd">العربية</a></li>
+<li class="nav-item"><a class="nav-link" href="/th/%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F_%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2/%E0%B8%9A%E0%B8%B4%E0%B8%95%E0%B8%84%E0%B8%AD%E0%B8%A2%E0%B8%99%E0%B9%8C/usd">ภาษาไทย</a></li>
+<li class="nav-item"><a class="nav-link" href="/vi/b%E1%BA%A3ng_gi%C3%A1/bitcoin/usd">Tiếng việt</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div class='' style='background: #4d4d4d; padding: 10px; color: white'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-5'>
+</div>
+<div class='col-md-7' style='text-align: right;'>
+Learn about the current market dynamics.
+Download the exclusive <a target="_blank" style="font-weight: 500; color: #8cc53f" href="http://bit.ly/q3-2017-cryptocurrency-report-coingecko">Q3 2017 Cryptocurrency Report</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="search-bar mobile">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-12">
+<div class='input-group search'>
+<select name="coins_to_search" id="coins_to_search" style="width:100%" class="select2-search-coins"><option value="">Search Coin</option><option value="863">0x (ZRX)</option>
+<option value="686">1337 (1337)</option>
+<option value="667">2GIVE (2GIVE)</option>
+<option value="822">300 Token (300)</option>
+<option value="1003">ALIS (ALIS)</option>
+<option value="1206">ALQO (ALQO)</option>
+<option value="148">APEXcoin (APEX)</option>
+<option value="185">ARCHcoin (ARCH)</option>
+<option value="873">ATBCoin (ATB)</option>
+<option value="806">ATC Coin (ATCC)</option>
+<option value="1108">ATLANT (ATL)</option>
+<option value="1095">ATM Chain (ATM)</option>
+<option value="1161">Abjcoin (ABJ)</option>
+<option value="1147">Achain (ACT)</option>
+<option value="172">Acoin (ACOIN)</option>
+<option value="929">AdCoin (ACC)</option>
+<option value="847">AdEx (ADX)</option>
+<option value="868">AdShares (ADST)</option>
+<option value="418">Adzcoin (ADZ)</option>
+<option value="321">Aeon (AEON)</option>
+<option value="1124">Aeron (ARN)</option>
+<option value="1091">Aeternity (AE)</option>
+<option value="399">Agoras (AGRS)</option>
+<option value="900">Agrello (DLT)</option>
+<option value="192">AidBit (AID)</option>
+<option value="74">Aiden (ADN)</option>
+<option value="1019">AirSwap (AST)</option>
+<option value="1000">AirToken (AIR)</option>
+<option value="1112">AltCommunity Coin (ALTCOM)</option>
+<option value="855">Altcoin (ALT)</option>
+<option value="1041">Amber (AMB)</option>
+<option value="315">AmberCoin (AMBER)</option>
+<option value="319">AmsterdamCoin (AMS)</option>
+<option value="23">Anoncoin (ANC)</option>
+<option value="34">Applecoin (APC)</option>
+<option value="681">Aragon (ANT)</option>
+<option value="519">Arcade Token (ARC)</option>
+<option value="633">ArcticCoin (ARC)</option>
+<option value="525">Ardor (ARDR)</option>
+<option value="433">Argentum (ARG)</option>
+<option value="740">Argus (ARGUS)</option>
+<option value="613">Ark (ARK)</option>
+<option value="141">ArtByte (ABY)</option>
+<option value="530">Artex Coin (ATX)</option>
+<option value="636">Asch (XAS)</option>
+<option value="72">Asiacoin (AC)</option>
+<option value="474">Asiadigicoin (ADCN)</option>
+<option value="628">AudioCoin (ADC)</option>
+<option value="309">Augur (REP)</option>
+<option value="3">Auroracoin (AUR)</option>
+<option value="1122">Autonio (NIO)</option>
+<option value="901">Aventus (AVT)</option>
+<option value="696">Avoncoin (ACN)</option>
+<option value="1211">B2B (B2B)</option>
+<option value="1174">B3Coin (B3)</option>
+<option value="678">BCAP (BCAP)</option>
+<option value="1056">BOScoin (BOS)</option>
+<option value="921">BRAT (BRAT)</option>
+<option value="1081">BTCMoon (BTCM)</option>
+<option value="432">BTSR (BTSR)</option>
+<option value="736">Bancor Network Token (BNT)</option>
+<option value="626">Bankcoin (B@)</option>
+<option value="677">Basic Attention Token (BAT)</option>
+<option value="271">Bata (BTA)</option>
+<option value="484">Beatcoin (XBTS)</option>
+<option value="580">Belacoin (BELA)</option>
+<option value="627">BenjiRolls (BENJI)</option>
+<option value="485">Bikercoin (BIC)</option>
+<option value="825">Binance Coin (BNB)</option>
+<option value="574">BipCoin (BIP)</option>
+<option value="974">Bismuth (BIS)</option>
+<option value="793">Bit20 (BTWTY)</option>
+<option value="258">BitBay (BAY)</option>
+<option value="842">BitCoal (COAL)</option>
+<option value="318">BitCrystals (BCY)</option>
+<option value="956">BitDice (CSNO)</option>
+<option value="612">BitSend (BSD)</option>
+<option value="95">BitShares (BTS)</option>
+<option value="231">BitStake (XBS)</option>
+<option value="250">BitSwift (SWIFT)</option>
+<option value="240">BitUSD (BITUSD)</option>
+<option value="283">BitZeny (ZNY)</option>
+<option value="97">Bitbar (BTB)</option>
+<option value="1101">Bitbase (BTBC)</option>
+<option value="254">Bitbean (BITB)</option>
+<option value="476">Bitcedi (BXC)</option>
+<option value="1">Bitcoin (BTC)</option>
+<option value="780">Bitcoin Cash (BCH)</option>
+<option value="1043">Bitcoin Gold (BTG)</option>
+<option value="469">Bitcoin Plus (XBC)</option>
+<option value="1054">Bitcoin Red (BTCRED)</option>
+<option value="296">Bitcoin Scrypt (BTCS)</option>
+<option value="1076">Bitcoin SegWit2X (BT2)</option>
+<option value="1063">Bitcoin Silver (BTCS)</option>
+<option value="118">BitcoinDark (BTCD)</option>
+<option value="360">BitcoinUltra (BTCU)</option>
+<option value="1004">BitcoinZ (BTCZ)</option>
+<option value="545">Bitconnect (BCC)</option>
+<option value="680">Bitcore (BTX)</option>
+<option value="1092">Bitdeal (BDL)</option>
+<option value="1075">Bitfinex Bitcoin Future (BT1)</option>
+<option value="368">Bitgem (BTG)</option>
+<option value="532">Bitland (CADASTRAL)</option>
+<option value="149">Bitleu (BTL)</option>
+<option value="125">Bitmark (BTM)</option>
+<option value="581">Bitparkcoin (BPC)</option>
+<option value="794">Bitquence (BQX)</option>
+<option value="1156">Bitradio (BRO)</option>
+<option value="136">Bitstar (BITS)</option>
+<option value="249">Bitz (BITZ)</option>
+<option value="50">BlackCoin (BLK)</option>
+<option value="876">Blackmoon Crypto (BMC)</option>
+<option value="244">Blakecoin (BLC)</option>
+<option value="653">Blitzcash (BLITZ)</option>
+<option value="1154">BlockCAT (CAT)</option>
+<option value="481">BlockPay (BLOCKPAY)</option>
+<option value="344">BlockShares (BKS)</option>
+<option value="236">Blocknet (BLOCK)</option>
+<option value="1143">Blockpool (BPL)</option>
+<option value="96">Bluecoin (BLU)</option>
+<option value="1218">Bodhi (BOT)</option>
+<option value="345">BoostCoin (BOST)</option>
+<option value="180">Bottlecaps (CAP)</option>
+<option value="879">Bowhead Health (AHT)</option>
+<option value="624">Breakout (BRK)</option>
+<option value="625">Breakout Stake (BRX)</option>
+<option value="651">Britcoin (BRIT)</option>
+<option value="202">Bunnycoin (BUN)</option>
+<option value="154">Burst (BURST)</option>
+<option value="884">BuzzCoin (BUZZ)</option>
+<option value="561">Byteball Bytes (GBYTE)</option>
+<option value="199">Bytecent (BYC)</option>
+<option value="92">Bytecoin (BCN)</option>
+<option value="1087">Bytom (BTM)</option>
+<option value="1011">CORION (COR)</option>
+<option value="955">COSS (COSS)</option>
+<option value="862">CVCoin (CVCOIN)</option>
+<option value="401">Cabbage Unit (CAB)</option>
+<option value="560">Cagecoin (CAGE)</option>
+<option value="526">Caliphcoin (CALC)</option>
+<option value="818">CampusCoin (CMPCO)</option>
+<option value="347">Canada eCoin (CDN)</option>
+<option value="538">Cannabis Industry Coin (XCI)</option>
+<option value="109">CannabisCoin (CANN)</option>
+<option value="155">Cannacoin (CCN)</option>
+<option value="327">Capricoin (CPC)</option>
+<option value="1123">CarTaxi (CTX)</option>
+<option value="975">Cardano (ADA)</option>
+<option value="1073">Cash Poker Pro (CASH)</option>
+<option value="64">Casinocoin (CSC)</option>
+<option value="844">Catcoin (CAT)</option>
+<option value="582">Centurion (CNT)</option>
+<option value="267">Cerium (XCE)</option>
+<option value="877">ChainLink (LINK)</option>
+<option value="672">Chaincoin (CHC)</option>
+<option value="604">Chronobank (TIME)</option>
+<option value="951">Chronologic (DAY)</option>
+<option value="70">Cinni (CINNI)</option>
+<option value="588">Circuits of Value (COVAL)</option>
+<option value="788">Civic (CVC)</option>
+<option value="230">Clams (CLAM)</option>
+<option value="1050">ClearPoll (POLL)</option>
+<option value="81">Cloakcoin (CLOAK)</option>
+<option value="415">Clubcoin (CLUB)</option>
+<option value="789">CoEval (COE)</option>
+<option value="971">Cobinhood (COB)</option>
+<option value="762">Cofound.it (CFI)</option>
+<option value="827">Coimatic 2.0 (CTIC2)</option>
+<option value="639">Coin2.1 (C2)</option>
+<option value="278">Coinomat (CNMT)</option>
+<option value="470">Comet (CMT)</option>
+<option value="1157">Compcoin (CMP)</option>
+<option value="1126">Confido (CFD)</option>
+<option value="1213">Copico (XCPO)</option>
+<option value="9">Counterparty (XCP)</option>
+<option value="251">Crave (CRAVE)</option>
+<option value="1155">Cream (CRM)</option>
+<option value="682">CreativeCoin (CREA)</option>
+<option value="1121">Credence Coin (CRDNC)</option>
+<option value="378">Creditbit (CRB)</option>
+<option value="883">Credo (CREDO)</option>
+<option value="466">Crevacoin (CREVA)</option>
+<option value="328">CrownCoin (CRW)</option>
+<option value="79">CryptCoin (CRYPT)</option>
+<option value="273">Crypto (CTO)</option>
+<option value="133">Crypto Bullion (CBX)</option>
+<option value="660">CryptoCarbon (CCRB)</option>
+<option value="135">CryptoEscudo (CESC)</option>
+<option value="857">CryptoForecast (CFT)</option>
+<option value="770">CryptoPing (PING)</option>
+<option value="472">Cryptojacks (CJ)</option>
+<option value="291">Cryptokenz (CYT)</option>
+<option value="1176">Cryptonex (CNX)</option>
+<option value="158">Cryptonite (XCN)</option>
+<option value="995">Crystal Clear (CCT)</option>
+<option value="76">Curecoin (CURE)</option>
+<option value="867">Cypher (CYP)</option>
+<option value="831">DAS (DAS)</option>
+<option value="1140">DCORP (DRP)</option>
+<option value="790">DHG (DHG)</option>
+<option value="87">DNotes (NOTE)</option>
+<option value="880">DROXNE (DRXNE)</option>
+<option value="591">Darcrus (DAR)</option>
+<option value="19">Dash (DASH)</option>
+<option value="297">Dashcoin (DSH)</option>
+<option value="803">Daxxcoin (DAXX)</option>
+<option value="275">DeBuNe (DEBUNE)</option>
+<option value="754">Decent (DCT)</option>
+<option value="1168">DecentBet (DBET)</option>
+<option value="878">Decentraland (MANA)</option>
+<option value="1165">Decision Token (HST)</option>
+<option value="329">Decred (DCR)</option>
+<option value="1148">DeepOnion (ONION)</option>
+<option value="1133">Delphy (DPY)</option>
+<option value="760">Denarius (DNR)</option>
+<option value="1152">Dent (DENT)</option>
+<option value="850">Dentacoin (DCN)</option>
+<option value="1119">Desire (DSR)</option>
+<option value="272">Deutsche eMark (DEM)</option>
+<option value="22">Devcoin (DVC)</option>
+<option value="165">Diamond (DMD)</option>
+<option value="322">DigiCube (CUBE)</option>
+<option value="351">DigiEuro (DEUR)</option>
+<option value="1214">DigiPulse (DGPT)</option>
+<option value="63">Digibyte (DGB)</option>
+<option value="132">DigitalNote (XDN)</option>
+<option value="1138">DigitalPrice (DP)</option>
+<option value="33">Digitalcoin (DGC)</option>
+<option value="397">DigixDAO (DGD)</option>
+<option value="860">Dimecoin (DIME)</option>
+<option value="748">Dinastycoin (DCY)</option>
+<option value="153">Dirac (XDQ)</option>
+<option value="376">Dobbscoin (BOB)</option>
+<option value="5">Dogecoin (DOGE)</option>
+<option value="120">Dogeparty (XDP)</option>
+<option value="1030">DomRaider (DRT)</option>
+<option value="295">DopeCoin (DOPE)</option>
+<option value="669">Dotcoin (DOT)</option>
+<option value="1072">Dovu (DOVU)</option>
+<option value="629">DubaiCoin-DBIX (DBIX)</option>
+<option value="697">Dynamic (DYN)</option>
+<option value="744">E-Currency Coin (ECC)</option>
+<option value="524">E-Dinar Coin (EDR)</option>
+<option value="439">EDRCoin (EDRC)</option>
+<option value="738">EOS (EOS)</option>
+<option value="1141">ERC20 (ERC20)</option>
+<option value="1099">ETHGAS (EGAS)</option>
+<option value="1049">EXRNchain (EXRN)</option>
+<option value="111">Earthcoin (EAC)</option>
+<option value="737">Ecobit (ECOB)</option>
+<option value="635">Edgeless (EDG)</option>
+<option value="1018">Eidoo (EDO)</option>
+<option value="46">Einsteinium (EMC2)</option>
+<option value="811">Elastic (XEL)</option>
+<option value="447">Elcoin (EL)</option>
+<option value="688">Electra (ECA)</option>
+<option value="1109">Electroneum (ETN)</option>
+<option value="234">Electronic Gulden (EFL)</option>
+<option value="264">Elektron (EKN)</option>
+<option value="945">Elixir (ELIX)</option>
+<option value="1083">Ellaism (ELLA)</option>
+<option value="1118">Eltcoin (ELTCOIN)</option>
+<option value="817">EmberCoin (EMB)</option>
+<option value="781">Embers (MBRS)</option>
+<option value="259">EmerCoin (EMC)</option>
+<option value="1162">Emphy (EPY)</option>
+<option value="587">Energycoin (ENRG)</option>
+<option value="1007">Enigma (ENG)</option>
+<option value="1102">Enjin Coin (ENJ)</option>
+<option value="468">Espers (ESP)</option>
+<option value="856">Eternity (ENT)</option>
+<option value="1013">EtherDoge (EDOGE)</option>
+<option value="279">Ethereum (ETH)</option>
+<option value="1036">Ethereum Blue (BLUE)</option>
+<option value="453">Ethereum Classic (ETC)</option>
+<option value="870">Ethereum Dark (ETHD)</option>
+<option value="1034">Ethereum Gold (ETG)</option>
+<option value="1062">Ethereum Lite (ELITE)</option>
+<option value="1082">Etherparty (FUEL)</option>
+<option value="664">EverGreenCoin (EGC)</option>
+<option value="997">Everex (EVX)</option>
+<option value="1027">Everus (EVR)</option>
+<option value="1052">Exchange Union (XUC)</option>
+<option value="609">ExclusiveCoin (EXCL)</option>
+<option value="150">Execoin (EXE)</option>
+<option value="339">Expanse (EXP)</option>
+<option value="1080">FAPcoin (FAP)</option>
+<option value="217">FIMKrypto (FIMK)</option>
+<option value="1114">FORCE (FOR)</option>
+<option value="896">Facecoin (FC)</option>
+<option value="310">Factom (FCT)</option>
+<option value="255">Faircoin (FAIR)</option>
+<option value="804">Falcoin (FAL)</option>
+<option value="191">Fantomcoin (FCN)</option>
+<option value="1130">Farad (FRD)</option>
+<option value="175">Fastcoin (FST)</option>
+<option value="12">Feathercoin (FTC)</option>
+<option value="35">Fedoracoin (TIPS)</option>
+<option value="166">Fibre (FIBRE)</option>
+<option value="800">FinCoin (FNC)</option>
+<option value="615">First Bitcoin (BIT)</option>
+<option value="522">First Blood (1ST)</option>
+<option value="601">Fitcoin (FIT)</option>
+<option value="765">Flash (FLASH)</option>
+<option value="241">Florincoin (FLO)</option>
+<option value="348">Flycoin (FLY)</option>
+<option value="1098">FlypMe (FYP)</option>
+<option value="586">Foldingcoin (FLDC)</option>
+<option value="47">Franko (FRK)</option>
+<option value="30">Freicoin (FRC)</option>
+<option value="108">Freshcoin (FRSH)</option>
+<option value="187">FuelCoin (FC2)</option>
+<option value="1135">Fujicoin (FJC)</option>
+<option value="290">Full Integrity Coin (FIC)</option>
+<option value="761">FunFair (FUN)</option>
+<option value="802">FuturXe (FXE)</option>
+<option value="182">GAIA (GAIA)</option>
+<option value="384">GCoin (GCN)</option>
+<option value="1191">GOLD Reward Token (GRX)</option>
+<option value="245">GSMcoin (GSM)</option>
+<option value="1089">GXShares (GXS)</option>
+<option value="584">Gambit (GAM)</option>
+<option value="445">GameBet (GBT)</option>
+<option value="193">GameCredits (GAME)</option>
+<option value="858">Gas (GAS)</option>
+<option value="771">GeertCoin (GEERT)</option>
+<option value="206">Gems (GEMZ)</option>
+<option value="1173">Genesis Vision (GVT)</option>
+<option value="658">Geocoin (GEO)</option>
+<option value="816">GeyserCoin (GSR)</option>
+<option value="1100">Gimli (GIM)</option>
+<option value="324">Global Currency Reserve (GCR)</option>
+<option value="799">Global Tour Coin (GTC)</option>
+<option value="73">GlobalBoost-Y (BSTY)</option>
+<option value="1150">GlobalToken (GLT)</option>
+<option value="188">GlowShares (GSX)</option>
+<option value="662">Gnosis (GNO)</option>
+<option value="1207">GoByte (GBX)</option>
+<option value="451">GoldBlocks (GB)</option>
+<option value="1146">GoldPieces (GP)</option>
+<option value="49">Goldcoin (GLD)</option>
+<option value="478">Goldmaxcoin (GMX)</option>
+<option value="542">Golem (GNT)</option>
+<option value="562">Golos (GOLOS)</option>
+<option value="352">GraniteCoin (GRN)</option>
+<option value="544">Grantcoin (GRT)</option>
+<option value="1106">Grid+ (GRID)</option>
+<option value="243">Gridcoin (GRC)</option>
+<option value="1144">Grimcoin (GRIM)</option>
+<option value="71">Groestlcoin (GRS)</option>
+<option value="128">Groupcoin (GPC)</option>
+<option value="196">Guarany (GUA)</option>
+<option value="143">Gulden (NLG)</option>
+<option value="807">GulfCoin (MGC)</option>
+<option value="565">HEAT (HEAT)</option>
+<option value="434">HOdlcoin (HODL)</option>
+<option value="1085">HShare (HSR)</option>
+<option value="162">HTMLcoin (HTML5)</option>
+<option value="570">Hacker Gold (HKG)</option>
+<option value="829">HarmonyCoin (HMC)</option>
+<option value="1171">Hawala.Today (HAT)</option>
+<option value="45">Heavycoin (HVC)</option>
+<option value="266">HellasCoin (HLC)</option>
+<option value="1005">HelloGold (HGT)</option>
+<option value="865">Hempcoin (THC)</option>
+<option value="572">HiCoin (XHI)</option>
+<option value="1110">High Gain (HIGH)</option>
+<option value="462">Hitcoin (HTC)</option>
+<option value="899">Hive (HVN)</option>
+<option value="59">Hobonickels (HBN)</option>
+<option value="772">Honey (HONEY)</option>
+<option value="139">Horizon (HZ)</option>
+<option value="994">Hubii Network (HBT)</option>
+<option value="647">Humaniq (HMQ)</option>
+<option value="126">Huntercoin (HUC)</option>
+<option value="701">Hush (HUSH)</option>
+<option value="142">Hyper (HYPER)</option>
+<option value="131">HyperStake (HYP)</option>
+<option value="533">ICO OpenLedger (ICOO)</option>
+<option value="1060">ICON (ICX)</option>
+<option value="1042">ICOS (ICOS)</option>
+<option value="106">IOCoin (IOC)</option>
+<option value="465">ION (ION)</option>
+<option value="692">IOTA (IOT)</option>
+<option value="529">Iconomi (ICN)</option>
+<option value="854">IncaKoin (NKA)</option>
+<option value="567">Incent (INCNT)</option>
+<option value="848">Indorse (IND)</option>
+<option value="14">Infinitecoin (IFC)</option>
+<option value="977">Infinity Economics (XIN)</option>
+<option value="311">Influxcoin (INFX)</option>
+<option value="1131">Innova (INN)</option>
+<option value="655">InsaneCoin (INSN)</option>
+<option value="814">InsureX (IXT)</option>
+<option value="1064">Intelligent Trading Tech (ITT)</option>
+<option value="743">Internet of People (IOP)</option>
+<option value="986">Internxt (INXT)</option>
+<option value="1163">Interstellar Holdings (HOLD)</option>
+<option value="1153">InvestFeed (IFT)</option>
+<option value="29">Ixcoin (IXC)</option>
+<option value="596">Janus (JNS)</option>
+<option value="1061">JavaScript Token (JS)</option>
+<option value="583">Jinn (JINN)</option>
+<option value="534">Jobscoin (JOBS)</option>
+<option value="650">Joincoin (J)</option>
+<option value="787">Joulecoin (XJO)</option>
+<option value="161">Judgecoin (JUDGE)</option>
+<option value="643">Karbowanec (KRB)</option>
+<option value="88">Karma (KARMA)</option>
+<option value="579">Kashhcoin (KASHH)</option>
+<option value="942">KexCoin (KEXCOIN)</option>
+<option value="981">KickCoin (KICK)</option>
+<option value="959">Kin (KIN)</option>
+<option value="611">Komodo (KMD)</option>
+<option value="668">KoreCoin (KORE)</option>
+<option value="400">Krypton (KR)</option>
+<option value="1047">KuCoin Shares (KCS)</option>
+<option value="676">Kurrent (KURT)</option>
+<option value="671">Kushcoin (KUSH)</option>
+<option value="947">Kyber Network (KNC)</option>
+<option value="1051">LAToken (LA)</option>
+<option value="463">LBRY Credits (LBC)</option>
+<option value="424">LEOcoin (LEO)</option>
+<option value="1038">LIFE (LIFE)</option>
+<option value="198">LTBcoin (LTBC)</option>
+<option value="1068">LUXCoin (LUX)</option>
+<option value="954">Lampix (PIX)</option>
+<option value="619">LePen (LEPEN)</option>
+<option value="742">Legends Room (LGD)</option>
+<option value="68">LibertyCoin (XLB)</option>
+<option value="104">Librexcoin (LXC)</option>
+<option value="782">Linda (LINDA)</option>
+<option value="791">Link Platform (LNK)</option>
+<option value="385">Lisk (LSK)</option>
+<option value="841">LiteBitcoin (LBTC)</option>
+<option value="257">LiteDoge (LDOGE)</option>
+<option value="2">Litecoin (LTC)</option>
+<option value="140">LitecoinDark (LTCD)</option>
+<option value="564">LoMoCoin (LMC)</option>
+<option value="913">Loopring (LRC)</option>
+<option value="656">LuckChain (BASH)</option>
+<option value="207">Luckycoin (LKY)</option>
+<option value="575">Lunacoin (LUNA)</option>
+<option value="735">Lunyr (LUN)</option>
+<option value="527">Lykke (LKK)</option>
+<option value="616">MBitBooks (MBIT)</option>
+<option value="747">MCAP (MCAP)</option>
+<option value="464">MMNXT (MMNXT)</option>
+<option value="473">MaYaCoin (MYC)</option>
+<option value="679">Machinecoin (MAC)</option>
+<option value="764">Macron (MCRN)</option>
+<option value="1025">Maecenas (ART)</option>
+<option value="176">Magi (XMG)</option>
+<option value="897">Magnetcoin (MAGN)</option>
+<option value="80">MaidSafeCoin (MAID)</option>
+<option value="292">MangoCoinz (MCZ)</option>
+<option value="784">MantraCoin (MNC)</option>
+<option value="313">MapCoin (MAPC)</option>
+<option value="276">Marinecoin (MTC)</option>
+<option value="444">MarteXcoin (MXT)</option>
+<option value="159">MaryJane (MARYJ)</option>
+<option value="638">Master Swiscoin (MSCN)</option>
+<option value="246">MasterTraderCoin (MTR)</option>
+<option value="683">Matchpool (GUP)</option>
+<option value="24">Maxcoin (MAX)</option>
+<option value="25">Mazacoin (MZC)</option>
+<option value="16">Megacoin (MEC)</option>
+<option value="605">Melon (MLN)</option>
+<option value="1139">Memetic (MEME)</option>
+<option value="1059">Mercury Protocol (GMT)</option>
+<option value="763">Metal (MTL)</option>
+<option value="317">Metal Music Coin (MTLMC3)</option>
+<option value="1086">Metaverse ETP (ETP)</option>
+<option value="98">Mincoin (MNC)</option>
+<option value="82">Mineralscoin (MIN)</option>
+<option value="702">Minereum (MNE)</option>
+<option value="1111">MinexCoin (MNX)</option>
+<option value="21">Mintcoin (MINT)</option>
+<option value="768">MobileGo (MGO)</option>
+<option value="1040">Modum (MOD)</option>
+<option value="895">Moeda Loyalty Points (MDA)</option>
+<option value="340">Moin (MOIN)</option>
+<option value="475">Mojocoin (MOJO)</option>
+<option value="99">MonaCoin (MONA)</option>
+<option value="739">Monaco (MCO)</option>
+<option value="69">Monero (XMR)</option>
+<option value="690">Moneta (MONETA)</option>
+<option value="170">MonetaryUnit (MUE)</option>
+<option value="902">Monetha (MTH)</option>
+<option value="75">Monocle (MON)</option>
+<option value="294">Mooncoin (MOON)</option>
+<option value="871">MorningStar (MRNG)</option>
+<option value="815">Mothership (MSP)</option>
+<option value="343">Muse (MUSE)</option>
+<option value="622">Musicoin (MUSIC)</option>
+<option value="66">Myriadcoin (XMY)</option>
+<option value="757">Mysterium (MYST)</option>
+<option value="233">NAV Coin (NAV)</option>
+<option value="242">NEM (XEM)</option>
+<option value="480">NEO (NEO)</option>
+<option value="1164">NEO GOLD (NEOG)</option>
+<option value="845">NVO (NVST)</option>
+<option value="6">NXT (NXT)</option>
+<option value="239">NXTventure (NXTV)</option>
+<option value="8">Namecoin (NMC)</option>
+<option value="1078">Natcoin (NTC)</option>
+<option value="62">Nautiluscoin (NAUT)</option>
+<option value="894">Neblio (NEBL)</option>
+<option value="147">Neoscoin (NEOS)</option>
+<option value="482">Neptunecoin (NTC)</option>
+<option value="36">Netcoin (NET)</option>
+<option value="1070">Network Token (NTWK)</option>
+<option value="288">NeuCoin (NEU)</option>
+<option value="886">NeuroDAO (NDAO)</option>
+<option value="693">NewYorkCoin (NYC)</option>
+<option value="563">Nexium (NXC)</option>
+<option value="576">Nexus (NXS)</option>
+<option value="874">Nexus Social (SCL)</option>
+<option value="864">Nimiq (NET)</option>
+<option value="758">NoLimitCoin (NLC2)</option>
+<option value="204">NobleCoin (NOBL)</option>
+<option value="183">Node (NODE)</option>
+<option value="15">Novacoin (NVC)</option>
+<option value="167">NuBits (USNBT)</option>
+<option value="171">NuShares (NSR)</option>
+<option value="1053">Nuls (NULS)</option>
+<option value="752">Numeraire (NMR)</option>
+<option value="365">NxttyACCI (ACCI)</option>
+<option value="168">Nxttycoin (NXTTY)</option>
+<option value="281">Nyancoin (NYAN)</option>
+<option value="326">OBITS (OBITS)</option>
+<option value="274">OKCash (OK)</option>
+<option value="887">Oceanlab (OCL)</option>
+<option value="448">Octocoin (888)</option>
+<option value="776">OmiseGo (OMG)</option>
+<option value="7">Omni (Mastercoin) (OMNI)</option>
+<option value="1136">Onix (ONX)</option>
+<option value="137">Opal (OPAL)</option>
+<option value="1048">Open Trading Network (OTN)</option>
+<option value="853">OpenANX (OAX)</option>
+<option value="785">Operacoin (OCN)</option>
+<option value="916">Opus (OPT)</option>
+<option value="826">OracleChain (OCT)</option>
+<option value="261">Orbitcoin (ORB)</option>
+<option value="1160">Oxycoin (OXY)</option>
+<option value="548">PIVX (PIVX)</option>
+<option value="606">PRCoin (PRC)</option>
+<option value="808">Paccoin (PAC)</option>
+<option value="607">Pakcoin (PAK)</option>
+<option value="138">Pandacoin (PND)</option>
+<option value="287">Pangea Poker (PANGEA)</option>
+<option value="1055">Paragon (PRG)</option>
+<option value="610">ParkByte (PKB)</option>
+<option value="839">Particl (PART)</option>
+<option value="547">Pascalcoin (PASC)</option>
+<option value="746">Patientory (PTOY)</option>
+<option value="999">PayPie (PPP)</option>
+<option value="195">Paycoin (XPY)</option>
+<option value="1189">Paypex (PAYX)</option>
+<option value="786">Peepcoin (PCN)</option>
+<option value="4">Peercoin (PPC)</option>
+<option value="541">Peerplays (PPY)</option>
+<option value="812">PeopleCoin (MEN)</option>
+<option value="568">PepeCash (PEPECASH)</option>
+<option value="694">Pesetacoin (PTC)</option>
+<option value="537">Pesobit (PSB)</option>
+<option value="1212">Phantomx (PNX)</option>
+<option value="160">PhilosopherStone (PHS)</option>
+<option value="177">Phoenixcoin (PXC)</option>
+<option value="1129">Phore (PHR)</option>
+<option value="190">Piggycoin (PIGGY)</option>
+<option value="809">Pillar (PLR)</option>
+<option value="631">PinkDog (PDG)</option>
+<option value="102">Pinkcoin (PC)</option>
+<option value="528">Pipcoin (PIP)</option>
+<option value="1017">PiplCoin (PIPL)</option>
+<option value="1066">Pirl (PIRL)</option>
+<option value="1077">PlayerCoin (PLACO)</option>
+<option value="578">PoSW Coin (POSW)</option>
+<option value="766">Polybius (PLBT)</option>
+<option value="753">Populous (PPT)</option>
+<option value="51">Potcoin (POT)</option>
+<option value="1104">Power Ledger (POWR)</option>
+<option value="823">Primalbase (PBT)</option>
+<option value="917">Primas (PST)</option>
+<option value="13">Primecoin (XPM)</option>
+<option value="833">Primulon (PRIMU)</option>
+<option value="1183">Privatix (PRIX)</option>
+<option value="674">Prizm (PZM)</option>
+<option value="767">ProCurrency (PROC)</option>
+<option value="637">Project Decorum (PDC)</option>
+<option value="869">Propy (PRO)</option>
+<option value="1088">Pura (PURA)</option>
+<option value="573">PureVidz (VIDZ)</option>
+<option value="774">Putin Classic (PUTIC)</option>
+<option value="773">PutinCoin (PUT)</option>
+<option value="1220">QASH (QASH)</option>
+<option value="107">Qibuck (QBK)</option>
+<option value="157">Qora (QORA)</option>
+<option value="684">Qtum (QTUM)</option>
+<option value="1219">Quantstamp (QSP)</option>
+<option value="700">Quantum Resistant Ledger (QRL)</option>
+<option value="10">Quark (QRK)</option>
+<option value="262">Quatloo (QTL)</option>
+<option value="268">QuazarCoin (QCN)</option>
+<option value="1096">Qvolta (QVT)</option>
+<option value="654">Qwark (QWARK)</option>
+<option value="885">REX (REX)</option>
+<option value="813">RHFCoin (RHFC)</option>
+<option value="843">RSGPcoin (RSGP)</option>
+<option value="338">Radium (RADS)</option>
+<option value="756">RaiBlocks (XRB)</option>
+<option value="1132">Raiden Network Token (RDN)</option>
+<option value="1127">Rasputin Online Coin (ROC)</option>
+<option value="284">Ratecoin (XRA)</option>
+<option value="85">Razor (RZR)</option>
+<option value="1074">Red Pulse (RPX)</option>
+<option value="40">Reddcoin (RDD)</option>
+<option value="972">Regalcoin (REC)</option>
+<option value="666">Renos (RNS)</option>
+<option value="1031">Request Network (REQ)</option>
+<option value="1107">Revain (R)</option>
+<option value="536">Revolvercoin (XRE)</option>
+<option value="783">Rialto (XRL)</option>
+<option value="593">Riecoin (RIC)</option>
+<option value="216">Rimbit (RBT)</option>
+<option value="1057">Ripio Credit Network (RCN)</option>
+<option value="44">Ripple (XRP)</option>
+<option value="452">Rise (RISE)</option>
+<option value="957">Rivetz (RVT)</option>
+<option value="1079">Roofs (ROOFS)</option>
+<option value="617">Round (ROUND)</option>
+<option value="1014">Royal Kingdom Coin (RKC)</option>
+<option value="828">Royalties (XRY)</option>
+<option value="144">Rubycoin (RBY)</option>
+<option value="801">Rupee (RUP)</option>
+<option value="962">SALT (SALT)</option>
+<option value="566">SARCoin (SAR)</option>
+<option value="1116">SHIELD (XSH)</option>
+<option value="417">SIBCoin (SIB)</option>
+<option value="350">SOILcoin (SOIL)</option>
+<option value="861">SONM (SNM)</option>
+<option value="419">Safe Exchange Coin (SAFEX)</option>
+<option value="750">Sakuracoin (SKR)</option>
+<option value="359">SaluS (SLS)</option>
+<option value="991">Sandcoin (SND)</option>
+<option value="797">Santiment Network Token (SAN)</option>
+<option value="323">Sativacoin (STV)</option>
+<option value="342">Scotcoin (SCOT)</option>
+<option value="349">Secretcoin (SCRT)</option>
+<option value="1032">SegWit2x [Futures] (B2X)</option>
+<option value="1002">Senderon (SDRN)</option>
+<option value="608">Sequence (SEQ)</option>
+<option value="164">Sexcoin (SXC)</option>
+<option value="129">ShadowCash (SDC)</option>
+<option value="1169">Sharechain (SSS)</option>
+<option value="173">Shibecoin (SHIBE)</option>
+<option value="426">Shift (SHIFT)</option>
+<option value="535">Shilling (SH)</option>
+<option value="289">Siacoin (SC)</option>
+<option value="810">Signatum (SIGT)</option>
+<option value="521">SingularDTV (SNGLS)</option>
+<option value="830">SkinCoin (SKIN)</option>
+<option value="687">Skycoin (SKY)</option>
+<option value="1159">Slevin (SLEVIN)</option>
+<option value="832">SmartCash (SMART)</option>
+<option value="670">Smartcoin (SMC)</option>
+<option value="685">Smileycoin (SMLY)</option>
+<option value="751">Soarcoin (SOAR)</option>
+<option value="134">SocialxBot (XBOT)</option>
+<option value="630">SolarFlareCoin (SFC)</option>
+<option value="152">Solarcoin (SLR)</option>
+<option value="179">SonicScrewdriver (SSD)</option>
+<option value="796">Sovereign Hero (HERO)</option>
+<option value="1158">Spacecoin (SPACE)</option>
+<option value="546">Spectrecoin (XSPEC)</option>
+<option value="805">Sphre AIR (XID)</option>
+<option value="201">SpreadCoin (SPR)</option>
+<option value="435">Sprouts (SPRTS)</option>
+<option value="1128">StarCash Network (STARS)</option>
+<option value="792">Starta (STA)</option>
+<option value="127">Startcoin (START)</option>
+<option value="779">Status (SNT)</option>
+<option value="189">Stealthcoin (XST)</option>
+<option value="398">Steem (STEEM)</option>
+<option value="652">Steem Dollars (SBD)</option>
+<option value="100">Stellar Lumens (XLM)</option>
+<option value="308">Steps (STEPS)</option>
+<option value="209">Sterlingcoin (SLG)</option>
+<option value="949">Storj (STORJ)</option>
+<option value="531">Stratis (STRAT)</option>
+<option value="1115">Streamr DATAcoin (DATA)</option>
+<option value="416">Stress (STS)</option>
+<option value="859">StrongHands (SHND)</option>
+<option value="950">Substratum (SUB)</option>
+<option value="1137">Sumokoin (SUMO)</option>
+<option value="1166">SunContract (SNC)</option>
+<option value="200">SuperCoin (SUPER)</option>
+<option value="169">SuperNET (UNITY)</option>
+<option value="914">Suretly (SUR)</option>
+<option value="649">SwagBucks (BUCKS)</option>
+<option value="621">Swarm City (SWT)</option>
+<option value="316">Swing (SWING)</option>
+<option value="130">Sync (SYNC)</option>
+<option value="698">Syndicate (SYNX)</option>
+<option value="320">Synereo (AMP)</option>
+<option value="600">Synergy (SNRG)</option>
+<option value="119">Syscoin (SYS)</option>
+<option value="1142">TIES Network (TIE)</option>
+<option value="94">Tacocoin (TCO)</option>
+<option value="665">Tagcoin (TAG)</option>
+<option value="597">Tao (XTO)</option>
+<option value="641">Tattoocoin (Limited Edition) (TLE)</option>
+<option value="640">Tattoocoin (Standard Edition) (TSE)</option>
+<option value="146">Techcoin (TECH)</option>
+<option value="775">TenX (PAY)</option>
+<option value="795">TerraNova (TER)</option>
+<option value="31">Terracoin (TRC)</option>
+<option value="285">Teslacoin (TES)</option>
+<option value="325">Tether (USDT)</option>
+<option value="976">Tezos (XTZ)</option>
+<option value="866">The Cypherfunks (FUNK)</option>
+<option value="614">TheGCCcoin (GCC)</option>
+<option value="755">Theresa May Coin (MAY)</option>
+<option value="923">Tierion (TNT)</option>
+<option value="211">TileCoin (XTC)</option>
+<option value="184">Titcoin (TIT)</option>
+<option value="232">TittieCoin (TTC)</option>
+<option value="824">ToaCoin (TOA)</option>
+<option value="675">TokenCard (TKN)</option>
+<option value="642">Torcoin (TOR)</option>
+<option value="1024">Tracto (TRCT)</option>
+<option value="798">TradecoinV2 (TRADE2)</option>
+<option value="280">Transfercoin (TX)</option>
+<option value="967">TrezarCoin (TZC)</option>
+<option value="769">Triangles (TRI)</option>
+<option value="592">Triggers (TRIG)</option>
+<option value="248">Trollcoin (TROLL)</option>
+<option value="1094">Tron (TRX)</option>
+<option value="623">Truckcoin (TRK)</option>
+<option value="940">TrueFlip (TFL)</option>
+<option value="460">Trumpcoin (TRUMP)</option>
+<option value="293">TrustPlus (TRUST)</option>
+<option value="741">Tyrocoin (TYC)</option>
+<option value="178">UFO Coin (UFO)</option>
+<option value="915">UG Token (UGT)</option>
+<option value="58">USDe (USDE)</option>
+<option value="181">Ubiq (UBQ)</option>
+<option value="265">Ucoin (U)</option>
+<option value="26">Ultracoin (UTC)</option>
+<option value="212">Unbreakablecoin (UNB)</option>
+<option value="1120">Unikoin Gold (UKG)</option>
+<option value="467">Unioncoin (UNC)</option>
+<option value="438">Unitus (UIS)</option>
+<option value="38">Unobtanium (UNO)</option>
+<option value="1170">Upfiring (UFR)</option>
+<option value="186">Uro (URO)</option>
+<option value="777">Useless Ethereum Token (UET)</option>
+<option value="618">UtaCoin (UTA)</option>
+<option value="252">UtilityCoin (UTIL)</option>
+<option value="893">VIVO (VIVO)</option>
+<option value="749">VOISE (VSM)</option>
+<option value="269">VPNCoin (VPN)</option>
+<option value="256">Vcash (XVC)</option>
+<option value="1167">VeChain (VEN)</option>
+<option value="599">Veltor (VLT)</option>
+<option value="203">Verge (XVG)</option>
+<option value="78">VeriCoin (VRC)</option>
+<option value="695">Veritaseum (VERI)</option>
+<option value="571">VeriumReserve (VRM)</option>
+<option value="539">Veros (VRS)</option>
+<option value="18">Vertcoin (VTC)</option>
+<option value="112">Viacoin (VIA)</option>
+<option value="983">Viberate (VIB)</option>
+<option value="101">Virtacoinplus (XVP)</option>
+<option value="632">VirtualCoin (VC)</option>
+<option value="657">Visio (VISIO)</option>
+<option value="1205">Viuly (VIU)</option>
+<option value="598">Vootcoin (VOOT)</option>
+<option value="386">Voxels (VOX)</option>
+<option value="898">Vsync (VSX)</option>
+<option value="1084">Vulcano (VULC)</option>
+<option value="437">WMCoin (WMC)</option>
+<option value="759">Wagerr (WGR)</option>
+<option value="889">Wallet Builders Coin (WBC)</option>
+<option value="1093">Walton (WTC)</option>
+<option value="163">Wankcoin (WKC)</option>
+<option value="425">Waves (WAVES)</option>
+<option value="645">WeTrust (TRST)</option>
+<option value="523">WexCoin (WEX)</option>
+<option value="60">Whitecoin (XWC)</option>
+<option value="590">Wild Beast Block (WBB)</option>
+<option value="648">Wings (WINGS)</option>
+<option value="346">Woodcoin (LOG)</option>
+<option value="17">Worldcoin (WDC)</option>
+<option value="247">X-Coin (XCO)</option>
+<option value="745">XP (XP)</option>
+<option value="875">XPlay (XPA)</option>
+<option value="461">Xaurum (XAUR)</option>
+<option value="577">Xenixcoin (XEN)</option>
+<option value="1067">Xenon (XNN)</option>
+<option value="314">Xiaomicoin (MI)</option>
+<option value="1058">Xios (XIOS)</option>
+<option value="644">XtraBYtes (XBY)</option>
+<option value="620">YashCoin (YASH)</option>
+<option value="20">Ybcoin (YBC)</option>
+<option value="1125">Yellow Token (YEL)</option>
+<option value="634">YoGold (YOG)</option>
+<option value="341">Yocoin (YOC)</option>
+<option value="1145">ZCash Gold (ZCG)</option>
+<option value="479">ZCoin (XZC)</option>
+<option value="595">ZcCoin (ZCC)</option>
+<option value="486">Zcash (ZEC)</option>
+<option value="540">Zclassic (ZCL)</option>
+<option value="65">Zeitcoin (ZEIT)</option>
+<option value="691">ZenCash (ZEN)</option>
+<option value="1134">Zephyr (ZEPH)</option>
+<option value="27">Zetacoin (ZET)</option>
+<option value="477">Zonecoin (ZNE)</option>
+<option value="699">ZrCoin (ZRC)</option>
+<option value="1149">Zurcoin (ZUR)</option>
+<option value="778">adToken (ADT)</option>
+<option value="673">bitCNY (BITCNY)</option>
+<option value="1172">bitJob (STU)</option>
+<option value="849">district0x (DNT)</option>
+<option value="1113">eBIT (EBIT)</option>
+<option value="1190">eBitcoin Cash (EBCH)</option>
+<option value="1151">eBoost (EBST)</option>
+<option value="1105">eGold (EGOLD)</option>
+<option value="1069">eREAL (EREAL)</option>
+<option value="1103">iBTC (IBTC)</option>
+<option value="1065">iEthereum (IETH)</option>
+<option value="646">iExec RLC (RLC)</option>
+<option value="872">iQuant (IQT)</option>
+<option value="286">jl777hodl (JLH)</option>
+<option value="543">vSlice (VSL)</option>
+<option value="585">vTorrent (VTR)</option>
+<option value="253">xCash (XCASH)</option>
+<option value="780">биткоин Cash (BCH)</option>
+<option value="1">биткоина (BTC)</option>
+<option value="279">эфириум (ETH)</option>
+<option value="1">بيتكوين (BTC)</option>
+<option value="1">บิตคอยน์ (BTC)</option>
+<option value="279">イーサリアム (ETH)</option>
+<option value="486">ジーキャッシュ (ZEC)</option>
+<option value="19">ダークコイン (DASH)</option>
+<option value="5">ドージコイン (DOGE)</option>
+<option value="1">ビットコイン (BTC)</option>
+<option value="1">ビットコイン (BTC)</option>
+<option value="780">ビットコインキャッシュ (BCH)</option>
+<option value="12">フェザーコイン (FTC)</option>
+<option value="99">モナーコイン (MONA)</option>
+<option value="2">ライトコイン (LTC)</option>
+<option value="44">リップル (XRP)</option>
+<option value="18">ヴァートコイン (VTC)</option>
+<option value="279">以太坊 (ETH)</option>
+<option value="279">以太幣 (ETH)</option>
+<option value="9">合約幣 (XCP)</option>
+<option value="9">合约币 (XCP)</option>
+<option value="8">域名币 (NMC)</option>
+<option value="8">域名幣 (NMC)</option>
+<option value="66">多彩币 (XMY)</option>
+<option value="66">多彩幣 (XMY)</option>
+<option value="10">夸克币 (QRK)</option>
+<option value="10">夸克幣 (QRK)</option>
+<option value="100">恆星幣 (XLM)</option>
+<option value="100">恒星币 (XLM)</option>
+<option value="14">无限币 (IFC)</option>
+<option value="6">未來幣 (NXT)</option>
+<option value="6">未来币 (NXT)</option>
+<option value="1">比特币 (BTC)</option>
+<option value="1">比特幣 (BTC)</option>
+<option value="95">比特股 (BTS)</option>
+<option value="95">比特股 (BTS)</option>
+<option value="4">点点币 (PPC)</option>
+<option value="14">無限幣 (IFC)</option>
+<option value="5">狗币 (DOGE)</option>
+<option value="5">狗狗币 (DOGE)</option>
+<option value="5">狗狗幣 (DOGE)</option>
+<option value="44">瑞波币 (XRP)</option>
+<option value="44">瑞波幣 (XRP)</option>
+<option value="40">瑞迪币 (RDD)</option>
+<option value="40">瑞迪幣 (RDD)</option>
+<option value="18">綠幣 (VTC)</option>
+<option value="78">維理幣 (VRC)</option>
+<option value="78">维理币 (VRC)</option>
+<option value="18">绿币 (VTC)</option>
+<option value="16">美卡币 (MEC)</option>
+<option value="16">美卡幣 (MEC)</option>
+<option value="12">羽毛币 (FTC)</option>
+<option value="12">羽毛幣 (FTC)</option>
+<option value="2">莱特币 (LTC)</option>
+<option value="2">萊特幣 (LTC)</option>
+<option value="13">質數幣 (XPM)</option>
+<option value="13">质数币 (XPM)</option>
+<option value="19">达世币 (DASH)</option>
+<option value="19">達世幣 (DASH)</option>
+<option value="69">門羅幣 (XMR)</option>
+<option value="69">门罗币 (XMR)</option>
+<option value="50">黑币 (BLK)</option>
+<option value="50">黑幣 (BLK)</option>
+<option value="4">點點幣 (PPC)</option>
+<option value="44">리플코인 (XRP)</option>
+<option value="1">비트코인 (BTC)</option>
+<option value="279">이더리움 (ETH)</option></select>
+</div>
+<form id="coins-search-form" data-search-placeholder="Search Coins" action="/coins/search?locale=en" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<input type="hidden" name="query" id="query" value="" class="input-sm form-control" />
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="main-menu deskstop">
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<ul class="nav coingecko">
+<li class="nav-item">
+<a href="/en">Chart</a>
+</li>
+<li class="nav-item">
+<a href="/en/crypto_index/crix">
+CRIX
+</a> </li>
+<li class="nav-item">
+<a href="/ico?locale=en">
+ICO
+</a> </li>
+<li>
+<a href="/en/commodities">
+Commodities
+</a> </li>
+<li class="buzz">
+<a href="/buzz?locale=en">
+Buzz
+</a> </li>
+<li><a href="#" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i> <span class="fa fa-caret-down"></span></a>
+<ul class="dropdown-menu ">
+<li><a href="/en/about">About</a></li>
+<li><a href="/en/faq">FAQ</a></li>
+<li><a href="/en/methodology">Methodology</a></li>
+<li><a href="https://selfserve.coingecko.com/">Advertising</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<div class='input-group search'>
+<select name="coins_to_search" id="coins_to_search" style="width:100%" class="select2-search-coins"><option value="">Search Coin</option><option value="863">0x (ZRX)</option>
+<option value="686">1337 (1337)</option>
+<option value="667">2GIVE (2GIVE)</option>
+<option value="822">300 Token (300)</option>
+<option value="1003">ALIS (ALIS)</option>
+<option value="1206">ALQO (ALQO)</option>
+<option value="148">APEXcoin (APEX)</option>
+<option value="185">ARCHcoin (ARCH)</option>
+<option value="873">ATBCoin (ATB)</option>
+<option value="806">ATC Coin (ATCC)</option>
+<option value="1108">ATLANT (ATL)</option>
+<option value="1095">ATM Chain (ATM)</option>
+<option value="1161">Abjcoin (ABJ)</option>
+<option value="1147">Achain (ACT)</option>
+<option value="172">Acoin (ACOIN)</option>
+<option value="929">AdCoin (ACC)</option>
+<option value="847">AdEx (ADX)</option>
+<option value="868">AdShares (ADST)</option>
+<option value="418">Adzcoin (ADZ)</option>
+<option value="321">Aeon (AEON)</option>
+<option value="1124">Aeron (ARN)</option>
+<option value="1091">Aeternity (AE)</option>
+<option value="399">Agoras (AGRS)</option>
+<option value="900">Agrello (DLT)</option>
+<option value="192">AidBit (AID)</option>
+<option value="74">Aiden (ADN)</option>
+<option value="1019">AirSwap (AST)</option>
+<option value="1000">AirToken (AIR)</option>
+<option value="1112">AltCommunity Coin (ALTCOM)</option>
+<option value="855">Altcoin (ALT)</option>
+<option value="1041">Amber (AMB)</option>
+<option value="315">AmberCoin (AMBER)</option>
+<option value="319">AmsterdamCoin (AMS)</option>
+<option value="23">Anoncoin (ANC)</option>
+<option value="34">Applecoin (APC)</option>
+<option value="681">Aragon (ANT)</option>
+<option value="519">Arcade Token (ARC)</option>
+<option value="633">ArcticCoin (ARC)</option>
+<option value="525">Ardor (ARDR)</option>
+<option value="433">Argentum (ARG)</option>
+<option value="740">Argus (ARGUS)</option>
+<option value="613">Ark (ARK)</option>
+<option value="141">ArtByte (ABY)</option>
+<option value="530">Artex Coin (ATX)</option>
+<option value="636">Asch (XAS)</option>
+<option value="72">Asiacoin (AC)</option>
+<option value="474">Asiadigicoin (ADCN)</option>
+<option value="628">AudioCoin (ADC)</option>
+<option value="309">Augur (REP)</option>
+<option value="3">Auroracoin (AUR)</option>
+<option value="1122">Autonio (NIO)</option>
+<option value="901">Aventus (AVT)</option>
+<option value="696">Avoncoin (ACN)</option>
+<option value="1211">B2B (B2B)</option>
+<option value="1174">B3Coin (B3)</option>
+<option value="678">BCAP (BCAP)</option>
+<option value="1056">BOScoin (BOS)</option>
+<option value="921">BRAT (BRAT)</option>
+<option value="1081">BTCMoon (BTCM)</option>
+<option value="432">BTSR (BTSR)</option>
+<option value="736">Bancor Network Token (BNT)</option>
+<option value="626">Bankcoin (B@)</option>
+<option value="677">Basic Attention Token (BAT)</option>
+<option value="271">Bata (BTA)</option>
+<option value="484">Beatcoin (XBTS)</option>
+<option value="580">Belacoin (BELA)</option>
+<option value="627">BenjiRolls (BENJI)</option>
+<option value="485">Bikercoin (BIC)</option>
+<option value="825">Binance Coin (BNB)</option>
+<option value="574">BipCoin (BIP)</option>
+<option value="974">Bismuth (BIS)</option>
+<option value="793">Bit20 (BTWTY)</option>
+<option value="258">BitBay (BAY)</option>
+<option value="842">BitCoal (COAL)</option>
+<option value="318">BitCrystals (BCY)</option>
+<option value="956">BitDice (CSNO)</option>
+<option value="612">BitSend (BSD)</option>
+<option value="95">BitShares (BTS)</option>
+<option value="231">BitStake (XBS)</option>
+<option value="250">BitSwift (SWIFT)</option>
+<option value="240">BitUSD (BITUSD)</option>
+<option value="283">BitZeny (ZNY)</option>
+<option value="97">Bitbar (BTB)</option>
+<option value="1101">Bitbase (BTBC)</option>
+<option value="254">Bitbean (BITB)</option>
+<option value="476">Bitcedi (BXC)</option>
+<option value="1">Bitcoin (BTC)</option>
+<option value="780">Bitcoin Cash (BCH)</option>
+<option value="1043">Bitcoin Gold (BTG)</option>
+<option value="469">Bitcoin Plus (XBC)</option>
+<option value="1054">Bitcoin Red (BTCRED)</option>
+<option value="296">Bitcoin Scrypt (BTCS)</option>
+<option value="1076">Bitcoin SegWit2X (BT2)</option>
+<option value="1063">Bitcoin Silver (BTCS)</option>
+<option value="118">BitcoinDark (BTCD)</option>
+<option value="360">BitcoinUltra (BTCU)</option>
+<option value="1004">BitcoinZ (BTCZ)</option>
+<option value="545">Bitconnect (BCC)</option>
+<option value="680">Bitcore (BTX)</option>
+<option value="1092">Bitdeal (BDL)</option>
+<option value="1075">Bitfinex Bitcoin Future (BT1)</option>
+<option value="368">Bitgem (BTG)</option>
+<option value="532">Bitland (CADASTRAL)</option>
+<option value="149">Bitleu (BTL)</option>
+<option value="125">Bitmark (BTM)</option>
+<option value="581">Bitparkcoin (BPC)</option>
+<option value="794">Bitquence (BQX)</option>
+<option value="1156">Bitradio (BRO)</option>
+<option value="136">Bitstar (BITS)</option>
+<option value="249">Bitz (BITZ)</option>
+<option value="50">BlackCoin (BLK)</option>
+<option value="876">Blackmoon Crypto (BMC)</option>
+<option value="244">Blakecoin (BLC)</option>
+<option value="653">Blitzcash (BLITZ)</option>
+<option value="1154">BlockCAT (CAT)</option>
+<option value="481">BlockPay (BLOCKPAY)</option>
+<option value="344">BlockShares (BKS)</option>
+<option value="236">Blocknet (BLOCK)</option>
+<option value="1143">Blockpool (BPL)</option>
+<option value="96">Bluecoin (BLU)</option>
+<option value="1218">Bodhi (BOT)</option>
+<option value="345">BoostCoin (BOST)</option>
+<option value="180">Bottlecaps (CAP)</option>
+<option value="879">Bowhead Health (AHT)</option>
+<option value="624">Breakout (BRK)</option>
+<option value="625">Breakout Stake (BRX)</option>
+<option value="651">Britcoin (BRIT)</option>
+<option value="202">Bunnycoin (BUN)</option>
+<option value="154">Burst (BURST)</option>
+<option value="884">BuzzCoin (BUZZ)</option>
+<option value="561">Byteball Bytes (GBYTE)</option>
+<option value="199">Bytecent (BYC)</option>
+<option value="92">Bytecoin (BCN)</option>
+<option value="1087">Bytom (BTM)</option>
+<option value="1011">CORION (COR)</option>
+<option value="955">COSS (COSS)</option>
+<option value="862">CVCoin (CVCOIN)</option>
+<option value="401">Cabbage Unit (CAB)</option>
+<option value="560">Cagecoin (CAGE)</option>
+<option value="526">Caliphcoin (CALC)</option>
+<option value="818">CampusCoin (CMPCO)</option>
+<option value="347">Canada eCoin (CDN)</option>
+<option value="538">Cannabis Industry Coin (XCI)</option>
+<option value="109">CannabisCoin (CANN)</option>
+<option value="155">Cannacoin (CCN)</option>
+<option value="327">Capricoin (CPC)</option>
+<option value="1123">CarTaxi (CTX)</option>
+<option value="975">Cardano (ADA)</option>
+<option value="1073">Cash Poker Pro (CASH)</option>
+<option value="64">Casinocoin (CSC)</option>
+<option value="844">Catcoin (CAT)</option>
+<option value="582">Centurion (CNT)</option>
+<option value="267">Cerium (XCE)</option>
+<option value="877">ChainLink (LINK)</option>
+<option value="672">Chaincoin (CHC)</option>
+<option value="604">Chronobank (TIME)</option>
+<option value="951">Chronologic (DAY)</option>
+<option value="70">Cinni (CINNI)</option>
+<option value="588">Circuits of Value (COVAL)</option>
+<option value="788">Civic (CVC)</option>
+<option value="230">Clams (CLAM)</option>
+<option value="1050">ClearPoll (POLL)</option>
+<option value="81">Cloakcoin (CLOAK)</option>
+<option value="415">Clubcoin (CLUB)</option>
+<option value="789">CoEval (COE)</option>
+<option value="971">Cobinhood (COB)</option>
+<option value="762">Cofound.it (CFI)</option>
+<option value="827">Coimatic 2.0 (CTIC2)</option>
+<option value="639">Coin2.1 (C2)</option>
+<option value="278">Coinomat (CNMT)</option>
+<option value="470">Comet (CMT)</option>
+<option value="1157">Compcoin (CMP)</option>
+<option value="1126">Confido (CFD)</option>
+<option value="1213">Copico (XCPO)</option>
+<option value="9">Counterparty (XCP)</option>
+<option value="251">Crave (CRAVE)</option>
+<option value="1155">Cream (CRM)</option>
+<option value="682">CreativeCoin (CREA)</option>
+<option value="1121">Credence Coin (CRDNC)</option>
+<option value="378">Creditbit (CRB)</option>
+<option value="883">Credo (CREDO)</option>
+<option value="466">Crevacoin (CREVA)</option>
+<option value="328">CrownCoin (CRW)</option>
+<option value="79">CryptCoin (CRYPT)</option>
+<option value="273">Crypto (CTO)</option>
+<option value="133">Crypto Bullion (CBX)</option>
+<option value="660">CryptoCarbon (CCRB)</option>
+<option value="135">CryptoEscudo (CESC)</option>
+<option value="857">CryptoForecast (CFT)</option>
+<option value="770">CryptoPing (PING)</option>
+<option value="472">Cryptojacks (CJ)</option>
+<option value="291">Cryptokenz (CYT)</option>
+<option value="1176">Cryptonex (CNX)</option>
+<option value="158">Cryptonite (XCN)</option>
+<option value="995">Crystal Clear (CCT)</option>
+<option value="76">Curecoin (CURE)</option>
+<option value="867">Cypher (CYP)</option>
+<option value="831">DAS (DAS)</option>
+<option value="1140">DCORP (DRP)</option>
+<option value="790">DHG (DHG)</option>
+<option value="87">DNotes (NOTE)</option>
+<option value="880">DROXNE (DRXNE)</option>
+<option value="591">Darcrus (DAR)</option>
+<option value="19">Dash (DASH)</option>
+<option value="297">Dashcoin (DSH)</option>
+<option value="803">Daxxcoin (DAXX)</option>
+<option value="275">DeBuNe (DEBUNE)</option>
+<option value="754">Decent (DCT)</option>
+<option value="1168">DecentBet (DBET)</option>
+<option value="878">Decentraland (MANA)</option>
+<option value="1165">Decision Token (HST)</option>
+<option value="329">Decred (DCR)</option>
+<option value="1148">DeepOnion (ONION)</option>
+<option value="1133">Delphy (DPY)</option>
+<option value="760">Denarius (DNR)</option>
+<option value="1152">Dent (DENT)</option>
+<option value="850">Dentacoin (DCN)</option>
+<option value="1119">Desire (DSR)</option>
+<option value="272">Deutsche eMark (DEM)</option>
+<option value="22">Devcoin (DVC)</option>
+<option value="165">Diamond (DMD)</option>
+<option value="322">DigiCube (CUBE)</option>
+<option value="351">DigiEuro (DEUR)</option>
+<option value="1214">DigiPulse (DGPT)</option>
+<option value="63">Digibyte (DGB)</option>
+<option value="132">DigitalNote (XDN)</option>
+<option value="1138">DigitalPrice (DP)</option>
+<option value="33">Digitalcoin (DGC)</option>
+<option value="397">DigixDAO (DGD)</option>
+<option value="860">Dimecoin (DIME)</option>
+<option value="748">Dinastycoin (DCY)</option>
+<option value="153">Dirac (XDQ)</option>
+<option value="376">Dobbscoin (BOB)</option>
+<option value="5">Dogecoin (DOGE)</option>
+<option value="120">Dogeparty (XDP)</option>
+<option value="1030">DomRaider (DRT)</option>
+<option value="295">DopeCoin (DOPE)</option>
+<option value="669">Dotcoin (DOT)</option>
+<option value="1072">Dovu (DOVU)</option>
+<option value="629">DubaiCoin-DBIX (DBIX)</option>
+<option value="697">Dynamic (DYN)</option>
+<option value="744">E-Currency Coin (ECC)</option>
+<option value="524">E-Dinar Coin (EDR)</option>
+<option value="439">EDRCoin (EDRC)</option>
+<option value="738">EOS (EOS)</option>
+<option value="1141">ERC20 (ERC20)</option>
+<option value="1099">ETHGAS (EGAS)</option>
+<option value="1049">EXRNchain (EXRN)</option>
+<option value="111">Earthcoin (EAC)</option>
+<option value="737">Ecobit (ECOB)</option>
+<option value="635">Edgeless (EDG)</option>
+<option value="1018">Eidoo (EDO)</option>
+<option value="46">Einsteinium (EMC2)</option>
+<option value="811">Elastic (XEL)</option>
+<option value="447">Elcoin (EL)</option>
+<option value="688">Electra (ECA)</option>
+<option value="1109">Electroneum (ETN)</option>
+<option value="234">Electronic Gulden (EFL)</option>
+<option value="264">Elektron (EKN)</option>
+<option value="945">Elixir (ELIX)</option>
+<option value="1083">Ellaism (ELLA)</option>
+<option value="1118">Eltcoin (ELTCOIN)</option>
+<option value="817">EmberCoin (EMB)</option>
+<option value="781">Embers (MBRS)</option>
+<option value="259">EmerCoin (EMC)</option>
+<option value="1162">Emphy (EPY)</option>
+<option value="587">Energycoin (ENRG)</option>
+<option value="1007">Enigma (ENG)</option>
+<option value="1102">Enjin Coin (ENJ)</option>
+<option value="468">Espers (ESP)</option>
+<option value="856">Eternity (ENT)</option>
+<option value="1013">EtherDoge (EDOGE)</option>
+<option value="279">Ethereum (ETH)</option>
+<option value="1036">Ethereum Blue (BLUE)</option>
+<option value="453">Ethereum Classic (ETC)</option>
+<option value="870">Ethereum Dark (ETHD)</option>
+<option value="1034">Ethereum Gold (ETG)</option>
+<option value="1062">Ethereum Lite (ELITE)</option>
+<option value="1082">Etherparty (FUEL)</option>
+<option value="664">EverGreenCoin (EGC)</option>
+<option value="997">Everex (EVX)</option>
+<option value="1027">Everus (EVR)</option>
+<option value="1052">Exchange Union (XUC)</option>
+<option value="609">ExclusiveCoin (EXCL)</option>
+<option value="150">Execoin (EXE)</option>
+<option value="339">Expanse (EXP)</option>
+<option value="1080">FAPcoin (FAP)</option>
+<option value="217">FIMKrypto (FIMK)</option>
+<option value="1114">FORCE (FOR)</option>
+<option value="896">Facecoin (FC)</option>
+<option value="310">Factom (FCT)</option>
+<option value="255">Faircoin (FAIR)</option>
+<option value="804">Falcoin (FAL)</option>
+<option value="191">Fantomcoin (FCN)</option>
+<option value="1130">Farad (FRD)</option>
+<option value="175">Fastcoin (FST)</option>
+<option value="12">Feathercoin (FTC)</option>
+<option value="35">Fedoracoin (TIPS)</option>
+<option value="166">Fibre (FIBRE)</option>
+<option value="800">FinCoin (FNC)</option>
+<option value="615">First Bitcoin (BIT)</option>
+<option value="522">First Blood (1ST)</option>
+<option value="601">Fitcoin (FIT)</option>
+<option value="765">Flash (FLASH)</option>
+<option value="241">Florincoin (FLO)</option>
+<option value="348">Flycoin (FLY)</option>
+<option value="1098">FlypMe (FYP)</option>
+<option value="586">Foldingcoin (FLDC)</option>
+<option value="47">Franko (FRK)</option>
+<option value="30">Freicoin (FRC)</option>
+<option value="108">Freshcoin (FRSH)</option>
+<option value="187">FuelCoin (FC2)</option>
+<option value="1135">Fujicoin (FJC)</option>
+<option value="290">Full Integrity Coin (FIC)</option>
+<option value="761">FunFair (FUN)</option>
+<option value="802">FuturXe (FXE)</option>
+<option value="182">GAIA (GAIA)</option>
+<option value="384">GCoin (GCN)</option>
+<option value="1191">GOLD Reward Token (GRX)</option>
+<option value="245">GSMcoin (GSM)</option>
+<option value="1089">GXShares (GXS)</option>
+<option value="584">Gambit (GAM)</option>
+<option value="445">GameBet (GBT)</option>
+<option value="193">GameCredits (GAME)</option>
+<option value="858">Gas (GAS)</option>
+<option value="771">GeertCoin (GEERT)</option>
+<option value="206">Gems (GEMZ)</option>
+<option value="1173">Genesis Vision (GVT)</option>
+<option value="658">Geocoin (GEO)</option>
+<option value="816">GeyserCoin (GSR)</option>
+<option value="1100">Gimli (GIM)</option>
+<option value="324">Global Currency Reserve (GCR)</option>
+<option value="799">Global Tour Coin (GTC)</option>
+<option value="73">GlobalBoost-Y (BSTY)</option>
+<option value="1150">GlobalToken (GLT)</option>
+<option value="188">GlowShares (GSX)</option>
+<option value="662">Gnosis (GNO)</option>
+<option value="1207">GoByte (GBX)</option>
+<option value="451">GoldBlocks (GB)</option>
+<option value="1146">GoldPieces (GP)</option>
+<option value="49">Goldcoin (GLD)</option>
+<option value="478">Goldmaxcoin (GMX)</option>
+<option value="542">Golem (GNT)</option>
+<option value="562">Golos (GOLOS)</option>
+<option value="352">GraniteCoin (GRN)</option>
+<option value="544">Grantcoin (GRT)</option>
+<option value="1106">Grid+ (GRID)</option>
+<option value="243">Gridcoin (GRC)</option>
+<option value="1144">Grimcoin (GRIM)</option>
+<option value="71">Groestlcoin (GRS)</option>
+<option value="128">Groupcoin (GPC)</option>
+<option value="196">Guarany (GUA)</option>
+<option value="143">Gulden (NLG)</option>
+<option value="807">GulfCoin (MGC)</option>
+<option value="565">HEAT (HEAT)</option>
+<option value="434">HOdlcoin (HODL)</option>
+<option value="1085">HShare (HSR)</option>
+<option value="162">HTMLcoin (HTML5)</option>
+<option value="570">Hacker Gold (HKG)</option>
+<option value="829">HarmonyCoin (HMC)</option>
+<option value="1171">Hawala.Today (HAT)</option>
+<option value="45">Heavycoin (HVC)</option>
+<option value="266">HellasCoin (HLC)</option>
+<option value="1005">HelloGold (HGT)</option>
+<option value="865">Hempcoin (THC)</option>
+<option value="572">HiCoin (XHI)</option>
+<option value="1110">High Gain (HIGH)</option>
+<option value="462">Hitcoin (HTC)</option>
+<option value="899">Hive (HVN)</option>
+<option value="59">Hobonickels (HBN)</option>
+<option value="772">Honey (HONEY)</option>
+<option value="139">Horizon (HZ)</option>
+<option value="994">Hubii Network (HBT)</option>
+<option value="647">Humaniq (HMQ)</option>
+<option value="126">Huntercoin (HUC)</option>
+<option value="701">Hush (HUSH)</option>
+<option value="142">Hyper (HYPER)</option>
+<option value="131">HyperStake (HYP)</option>
+<option value="533">ICO OpenLedger (ICOO)</option>
+<option value="1060">ICON (ICX)</option>
+<option value="1042">ICOS (ICOS)</option>
+<option value="106">IOCoin (IOC)</option>
+<option value="465">ION (ION)</option>
+<option value="692">IOTA (IOT)</option>
+<option value="529">Iconomi (ICN)</option>
+<option value="854">IncaKoin (NKA)</option>
+<option value="567">Incent (INCNT)</option>
+<option value="848">Indorse (IND)</option>
+<option value="14">Infinitecoin (IFC)</option>
+<option value="977">Infinity Economics (XIN)</option>
+<option value="311">Influxcoin (INFX)</option>
+<option value="1131">Innova (INN)</option>
+<option value="655">InsaneCoin (INSN)</option>
+<option value="814">InsureX (IXT)</option>
+<option value="1064">Intelligent Trading Tech (ITT)</option>
+<option value="743">Internet of People (IOP)</option>
+<option value="986">Internxt (INXT)</option>
+<option value="1163">Interstellar Holdings (HOLD)</option>
+<option value="1153">InvestFeed (IFT)</option>
+<option value="29">Ixcoin (IXC)</option>
+<option value="596">Janus (JNS)</option>
+<option value="1061">JavaScript Token (JS)</option>
+<option value="583">Jinn (JINN)</option>
+<option value="534">Jobscoin (JOBS)</option>
+<option value="650">Joincoin (J)</option>
+<option value="787">Joulecoin (XJO)</option>
+<option value="161">Judgecoin (JUDGE)</option>
+<option value="643">Karbowanec (KRB)</option>
+<option value="88">Karma (KARMA)</option>
+<option value="579">Kashhcoin (KASHH)</option>
+<option value="942">KexCoin (KEXCOIN)</option>
+<option value="981">KickCoin (KICK)</option>
+<option value="959">Kin (KIN)</option>
+<option value="611">Komodo (KMD)</option>
+<option value="668">KoreCoin (KORE)</option>
+<option value="400">Krypton (KR)</option>
+<option value="1047">KuCoin Shares (KCS)</option>
+<option value="676">Kurrent (KURT)</option>
+<option value="671">Kushcoin (KUSH)</option>
+<option value="947">Kyber Network (KNC)</option>
+<option value="1051">LAToken (LA)</option>
+<option value="463">LBRY Credits (LBC)</option>
+<option value="424">LEOcoin (LEO)</option>
+<option value="1038">LIFE (LIFE)</option>
+<option value="198">LTBcoin (LTBC)</option>
+<option value="1068">LUXCoin (LUX)</option>
+<option value="954">Lampix (PIX)</option>
+<option value="619">LePen (LEPEN)</option>
+<option value="742">Legends Room (LGD)</option>
+<option value="68">LibertyCoin (XLB)</option>
+<option value="104">Librexcoin (LXC)</option>
+<option value="782">Linda (LINDA)</option>
+<option value="791">Link Platform (LNK)</option>
+<option value="385">Lisk (LSK)</option>
+<option value="841">LiteBitcoin (LBTC)</option>
+<option value="257">LiteDoge (LDOGE)</option>
+<option value="2">Litecoin (LTC)</option>
+<option value="140">LitecoinDark (LTCD)</option>
+<option value="564">LoMoCoin (LMC)</option>
+<option value="913">Loopring (LRC)</option>
+<option value="656">LuckChain (BASH)</option>
+<option value="207">Luckycoin (LKY)</option>
+<option value="575">Lunacoin (LUNA)</option>
+<option value="735">Lunyr (LUN)</option>
+<option value="527">Lykke (LKK)</option>
+<option value="616">MBitBooks (MBIT)</option>
+<option value="747">MCAP (MCAP)</option>
+<option value="464">MMNXT (MMNXT)</option>
+<option value="473">MaYaCoin (MYC)</option>
+<option value="679">Machinecoin (MAC)</option>
+<option value="764">Macron (MCRN)</option>
+<option value="1025">Maecenas (ART)</option>
+<option value="176">Magi (XMG)</option>
+<option value="897">Magnetcoin (MAGN)</option>
+<option value="80">MaidSafeCoin (MAID)</option>
+<option value="292">MangoCoinz (MCZ)</option>
+<option value="784">MantraCoin (MNC)</option>
+<option value="313">MapCoin (MAPC)</option>
+<option value="276">Marinecoin (MTC)</option>
+<option value="444">MarteXcoin (MXT)</option>
+<option value="159">MaryJane (MARYJ)</option>
+<option value="638">Master Swiscoin (MSCN)</option>
+<option value="246">MasterTraderCoin (MTR)</option>
+<option value="683">Matchpool (GUP)</option>
+<option value="24">Maxcoin (MAX)</option>
+<option value="25">Mazacoin (MZC)</option>
+<option value="16">Megacoin (MEC)</option>
+<option value="605">Melon (MLN)</option>
+<option value="1139">Memetic (MEME)</option>
+<option value="1059">Mercury Protocol (GMT)</option>
+<option value="763">Metal (MTL)</option>
+<option value="317">Metal Music Coin (MTLMC3)</option>
+<option value="1086">Metaverse ETP (ETP)</option>
+<option value="98">Mincoin (MNC)</option>
+<option value="82">Mineralscoin (MIN)</option>
+<option value="702">Minereum (MNE)</option>
+<option value="1111">MinexCoin (MNX)</option>
+<option value="21">Mintcoin (MINT)</option>
+<option value="768">MobileGo (MGO)</option>
+<option value="1040">Modum (MOD)</option>
+<option value="895">Moeda Loyalty Points (MDA)</option>
+<option value="340">Moin (MOIN)</option>
+<option value="475">Mojocoin (MOJO)</option>
+<option value="99">MonaCoin (MONA)</option>
+<option value="739">Monaco (MCO)</option>
+<option value="69">Monero (XMR)</option>
+<option value="690">Moneta (MONETA)</option>
+<option value="170">MonetaryUnit (MUE)</option>
+<option value="902">Monetha (MTH)</option>
+<option value="75">Monocle (MON)</option>
+<option value="294">Mooncoin (MOON)</option>
+<option value="871">MorningStar (MRNG)</option>
+<option value="815">Mothership (MSP)</option>
+<option value="343">Muse (MUSE)</option>
+<option value="622">Musicoin (MUSIC)</option>
+<option value="66">Myriadcoin (XMY)</option>
+<option value="757">Mysterium (MYST)</option>
+<option value="233">NAV Coin (NAV)</option>
+<option value="242">NEM (XEM)</option>
+<option value="480">NEO (NEO)</option>
+<option value="1164">NEO GOLD (NEOG)</option>
+<option value="845">NVO (NVST)</option>
+<option value="6">NXT (NXT)</option>
+<option value="239">NXTventure (NXTV)</option>
+<option value="8">Namecoin (NMC)</option>
+<option value="1078">Natcoin (NTC)</option>
+<option value="62">Nautiluscoin (NAUT)</option>
+<option value="894">Neblio (NEBL)</option>
+<option value="147">Neoscoin (NEOS)</option>
+<option value="482">Neptunecoin (NTC)</option>
+<option value="36">Netcoin (NET)</option>
+<option value="1070">Network Token (NTWK)</option>
+<option value="288">NeuCoin (NEU)</option>
+<option value="886">NeuroDAO (NDAO)</option>
+<option value="693">NewYorkCoin (NYC)</option>
+<option value="563">Nexium (NXC)</option>
+<option value="576">Nexus (NXS)</option>
+<option value="874">Nexus Social (SCL)</option>
+<option value="864">Nimiq (NET)</option>
+<option value="758">NoLimitCoin (NLC2)</option>
+<option value="204">NobleCoin (NOBL)</option>
+<option value="183">Node (NODE)</option>
+<option value="15">Novacoin (NVC)</option>
+<option value="167">NuBits (USNBT)</option>
+<option value="171">NuShares (NSR)</option>
+<option value="1053">Nuls (NULS)</option>
+<option value="752">Numeraire (NMR)</option>
+<option value="365">NxttyACCI (ACCI)</option>
+<option value="168">Nxttycoin (NXTTY)</option>
+<option value="281">Nyancoin (NYAN)</option>
+<option value="326">OBITS (OBITS)</option>
+<option value="274">OKCash (OK)</option>
+<option value="887">Oceanlab (OCL)</option>
+<option value="448">Octocoin (888)</option>
+<option value="776">OmiseGo (OMG)</option>
+<option value="7">Omni (Mastercoin) (OMNI)</option>
+<option value="1136">Onix (ONX)</option>
+<option value="137">Opal (OPAL)</option>
+<option value="1048">Open Trading Network (OTN)</option>
+<option value="853">OpenANX (OAX)</option>
+<option value="785">Operacoin (OCN)</option>
+<option value="916">Opus (OPT)</option>
+<option value="826">OracleChain (OCT)</option>
+<option value="261">Orbitcoin (ORB)</option>
+<option value="1160">Oxycoin (OXY)</option>
+<option value="548">PIVX (PIVX)</option>
+<option value="606">PRCoin (PRC)</option>
+<option value="808">Paccoin (PAC)</option>
+<option value="607">Pakcoin (PAK)</option>
+<option value="138">Pandacoin (PND)</option>
+<option value="287">Pangea Poker (PANGEA)</option>
+<option value="1055">Paragon (PRG)</option>
+<option value="610">ParkByte (PKB)</option>
+<option value="839">Particl (PART)</option>
+<option value="547">Pascalcoin (PASC)</option>
+<option value="746">Patientory (PTOY)</option>
+<option value="999">PayPie (PPP)</option>
+<option value="195">Paycoin (XPY)</option>
+<option value="1189">Paypex (PAYX)</option>
+<option value="786">Peepcoin (PCN)</option>
+<option value="4">Peercoin (PPC)</option>
+<option value="541">Peerplays (PPY)</option>
+<option value="812">PeopleCoin (MEN)</option>
+<option value="568">PepeCash (PEPECASH)</option>
+<option value="694">Pesetacoin (PTC)</option>
+<option value="537">Pesobit (PSB)</option>
+<option value="1212">Phantomx (PNX)</option>
+<option value="160">PhilosopherStone (PHS)</option>
+<option value="177">Phoenixcoin (PXC)</option>
+<option value="1129">Phore (PHR)</option>
+<option value="190">Piggycoin (PIGGY)</option>
+<option value="809">Pillar (PLR)</option>
+<option value="631">PinkDog (PDG)</option>
+<option value="102">Pinkcoin (PC)</option>
+<option value="528">Pipcoin (PIP)</option>
+<option value="1017">PiplCoin (PIPL)</option>
+<option value="1066">Pirl (PIRL)</option>
+<option value="1077">PlayerCoin (PLACO)</option>
+<option value="578">PoSW Coin (POSW)</option>
+<option value="766">Polybius (PLBT)</option>
+<option value="753">Populous (PPT)</option>
+<option value="51">Potcoin (POT)</option>
+<option value="1104">Power Ledger (POWR)</option>
+<option value="823">Primalbase (PBT)</option>
+<option value="917">Primas (PST)</option>
+<option value="13">Primecoin (XPM)</option>
+<option value="833">Primulon (PRIMU)</option>
+<option value="1183">Privatix (PRIX)</option>
+<option value="674">Prizm (PZM)</option>
+<option value="767">ProCurrency (PROC)</option>
+<option value="637">Project Decorum (PDC)</option>
+<option value="869">Propy (PRO)</option>
+<option value="1088">Pura (PURA)</option>
+<option value="573">PureVidz (VIDZ)</option>
+<option value="774">Putin Classic (PUTIC)</option>
+<option value="773">PutinCoin (PUT)</option>
+<option value="1220">QASH (QASH)</option>
+<option value="107">Qibuck (QBK)</option>
+<option value="157">Qora (QORA)</option>
+<option value="684">Qtum (QTUM)</option>
+<option value="1219">Quantstamp (QSP)</option>
+<option value="700">Quantum Resistant Ledger (QRL)</option>
+<option value="10">Quark (QRK)</option>
+<option value="262">Quatloo (QTL)</option>
+<option value="268">QuazarCoin (QCN)</option>
+<option value="1096">Qvolta (QVT)</option>
+<option value="654">Qwark (QWARK)</option>
+<option value="885">REX (REX)</option>
+<option value="813">RHFCoin (RHFC)</option>
+<option value="843">RSGPcoin (RSGP)</option>
+<option value="338">Radium (RADS)</option>
+<option value="756">RaiBlocks (XRB)</option>
+<option value="1132">Raiden Network Token (RDN)</option>
+<option value="1127">Rasputin Online Coin (ROC)</option>
+<option value="284">Ratecoin (XRA)</option>
+<option value="85">Razor (RZR)</option>
+<option value="1074">Red Pulse (RPX)</option>
+<option value="40">Reddcoin (RDD)</option>
+<option value="972">Regalcoin (REC)</option>
+<option value="666">Renos (RNS)</option>
+<option value="1031">Request Network (REQ)</option>
+<option value="1107">Revain (R)</option>
+<option value="536">Revolvercoin (XRE)</option>
+<option value="783">Rialto (XRL)</option>
+<option value="593">Riecoin (RIC)</option>
+<option value="216">Rimbit (RBT)</option>
+<option value="1057">Ripio Credit Network (RCN)</option>
+<option value="44">Ripple (XRP)</option>
+<option value="452">Rise (RISE)</option>
+<option value="957">Rivetz (RVT)</option>
+<option value="1079">Roofs (ROOFS)</option>
+<option value="617">Round (ROUND)</option>
+<option value="1014">Royal Kingdom Coin (RKC)</option>
+<option value="828">Royalties (XRY)</option>
+<option value="144">Rubycoin (RBY)</option>
+<option value="801">Rupee (RUP)</option>
+<option value="962">SALT (SALT)</option>
+<option value="566">SARCoin (SAR)</option>
+<option value="1116">SHIELD (XSH)</option>
+<option value="417">SIBCoin (SIB)</option>
+<option value="350">SOILcoin (SOIL)</option>
+<option value="861">SONM (SNM)</option>
+<option value="419">Safe Exchange Coin (SAFEX)</option>
+<option value="750">Sakuracoin (SKR)</option>
+<option value="359">SaluS (SLS)</option>
+<option value="991">Sandcoin (SND)</option>
+<option value="797">Santiment Network Token (SAN)</option>
+<option value="323">Sativacoin (STV)</option>
+<option value="342">Scotcoin (SCOT)</option>
+<option value="349">Secretcoin (SCRT)</option>
+<option value="1032">SegWit2x [Futures] (B2X)</option>
+<option value="1002">Senderon (SDRN)</option>
+<option value="608">Sequence (SEQ)</option>
+<option value="164">Sexcoin (SXC)</option>
+<option value="129">ShadowCash (SDC)</option>
+<option value="1169">Sharechain (SSS)</option>
+<option value="173">Shibecoin (SHIBE)</option>
+<option value="426">Shift (SHIFT)</option>
+<option value="535">Shilling (SH)</option>
+<option value="289">Siacoin (SC)</option>
+<option value="810">Signatum (SIGT)</option>
+<option value="521">SingularDTV (SNGLS)</option>
+<option value="830">SkinCoin (SKIN)</option>
+<option value="687">Skycoin (SKY)</option>
+<option value="1159">Slevin (SLEVIN)</option>
+<option value="832">SmartCash (SMART)</option>
+<option value="670">Smartcoin (SMC)</option>
+<option value="685">Smileycoin (SMLY)</option>
+<option value="751">Soarcoin (SOAR)</option>
+<option value="134">SocialxBot (XBOT)</option>
+<option value="630">SolarFlareCoin (SFC)</option>
+<option value="152">Solarcoin (SLR)</option>
+<option value="179">SonicScrewdriver (SSD)</option>
+<option value="796">Sovereign Hero (HERO)</option>
+<option value="1158">Spacecoin (SPACE)</option>
+<option value="546">Spectrecoin (XSPEC)</option>
+<option value="805">Sphre AIR (XID)</option>
+<option value="201">SpreadCoin (SPR)</option>
+<option value="435">Sprouts (SPRTS)</option>
+<option value="1128">StarCash Network (STARS)</option>
+<option value="792">Starta (STA)</option>
+<option value="127">Startcoin (START)</option>
+<option value="779">Status (SNT)</option>
+<option value="189">Stealthcoin (XST)</option>
+<option value="398">Steem (STEEM)</option>
+<option value="652">Steem Dollars (SBD)</option>
+<option value="100">Stellar Lumens (XLM)</option>
+<option value="308">Steps (STEPS)</option>
+<option value="209">Sterlingcoin (SLG)</option>
+<option value="949">Storj (STORJ)</option>
+<option value="531">Stratis (STRAT)</option>
+<option value="1115">Streamr DATAcoin (DATA)</option>
+<option value="416">Stress (STS)</option>
+<option value="859">StrongHands (SHND)</option>
+<option value="950">Substratum (SUB)</option>
+<option value="1137">Sumokoin (SUMO)</option>
+<option value="1166">SunContract (SNC)</option>
+<option value="200">SuperCoin (SUPER)</option>
+<option value="169">SuperNET (UNITY)</option>
+<option value="914">Suretly (SUR)</option>
+<option value="649">SwagBucks (BUCKS)</option>
+<option value="621">Swarm City (SWT)</option>
+<option value="316">Swing (SWING)</option>
+<option value="130">Sync (SYNC)</option>
+<option value="698">Syndicate (SYNX)</option>
+<option value="320">Synereo (AMP)</option>
+<option value="600">Synergy (SNRG)</option>
+<option value="119">Syscoin (SYS)</option>
+<option value="1142">TIES Network (TIE)</option>
+<option value="94">Tacocoin (TCO)</option>
+<option value="665">Tagcoin (TAG)</option>
+<option value="597">Tao (XTO)</option>
+<option value="641">Tattoocoin (Limited Edition) (TLE)</option>
+<option value="640">Tattoocoin (Standard Edition) (TSE)</option>
+<option value="146">Techcoin (TECH)</option>
+<option value="775">TenX (PAY)</option>
+<option value="795">TerraNova (TER)</option>
+<option value="31">Terracoin (TRC)</option>
+<option value="285">Teslacoin (TES)</option>
+<option value="325">Tether (USDT)</option>
+<option value="976">Tezos (XTZ)</option>
+<option value="866">The Cypherfunks (FUNK)</option>
+<option value="614">TheGCCcoin (GCC)</option>
+<option value="755">Theresa May Coin (MAY)</option>
+<option value="923">Tierion (TNT)</option>
+<option value="211">TileCoin (XTC)</option>
+<option value="184">Titcoin (TIT)</option>
+<option value="232">TittieCoin (TTC)</option>
+<option value="824">ToaCoin (TOA)</option>
+<option value="675">TokenCard (TKN)</option>
+<option value="642">Torcoin (TOR)</option>
+<option value="1024">Tracto (TRCT)</option>
+<option value="798">TradecoinV2 (TRADE2)</option>
+<option value="280">Transfercoin (TX)</option>
+<option value="967">TrezarCoin (TZC)</option>
+<option value="769">Triangles (TRI)</option>
+<option value="592">Triggers (TRIG)</option>
+<option value="248">Trollcoin (TROLL)</option>
+<option value="1094">Tron (TRX)</option>
+<option value="623">Truckcoin (TRK)</option>
+<option value="940">TrueFlip (TFL)</option>
+<option value="460">Trumpcoin (TRUMP)</option>
+<option value="293">TrustPlus (TRUST)</option>
+<option value="741">Tyrocoin (TYC)</option>
+<option value="178">UFO Coin (UFO)</option>
+<option value="915">UG Token (UGT)</option>
+<option value="58">USDe (USDE)</option>
+<option value="181">Ubiq (UBQ)</option>
+<option value="265">Ucoin (U)</option>
+<option value="26">Ultracoin (UTC)</option>
+<option value="212">Unbreakablecoin (UNB)</option>
+<option value="1120">Unikoin Gold (UKG)</option>
+<option value="467">Unioncoin (UNC)</option>
+<option value="438">Unitus (UIS)</option>
+<option value="38">Unobtanium (UNO)</option>
+<option value="1170">Upfiring (UFR)</option>
+<option value="186">Uro (URO)</option>
+<option value="777">Useless Ethereum Token (UET)</option>
+<option value="618">UtaCoin (UTA)</option>
+<option value="252">UtilityCoin (UTIL)</option>
+<option value="893">VIVO (VIVO)</option>
+<option value="749">VOISE (VSM)</option>
+<option value="269">VPNCoin (VPN)</option>
+<option value="256">Vcash (XVC)</option>
+<option value="1167">VeChain (VEN)</option>
+<option value="599">Veltor (VLT)</option>
+<option value="203">Verge (XVG)</option>
+<option value="78">VeriCoin (VRC)</option>
+<option value="695">Veritaseum (VERI)</option>
+<option value="571">VeriumReserve (VRM)</option>
+<option value="539">Veros (VRS)</option>
+<option value="18">Vertcoin (VTC)</option>
+<option value="112">Viacoin (VIA)</option>
+<option value="983">Viberate (VIB)</option>
+<option value="101">Virtacoinplus (XVP)</option>
+<option value="632">VirtualCoin (VC)</option>
+<option value="657">Visio (VISIO)</option>
+<option value="1205">Viuly (VIU)</option>
+<option value="598">Vootcoin (VOOT)</option>
+<option value="386">Voxels (VOX)</option>
+<option value="898">Vsync (VSX)</option>
+<option value="1084">Vulcano (VULC)</option>
+<option value="437">WMCoin (WMC)</option>
+<option value="759">Wagerr (WGR)</option>
+<option value="889">Wallet Builders Coin (WBC)</option>
+<option value="1093">Walton (WTC)</option>
+<option value="163">Wankcoin (WKC)</option>
+<option value="425">Waves (WAVES)</option>
+<option value="645">WeTrust (TRST)</option>
+<option value="523">WexCoin (WEX)</option>
+<option value="60">Whitecoin (XWC)</option>
+<option value="590">Wild Beast Block (WBB)</option>
+<option value="648">Wings (WINGS)</option>
+<option value="346">Woodcoin (LOG)</option>
+<option value="17">Worldcoin (WDC)</option>
+<option value="247">X-Coin (XCO)</option>
+<option value="745">XP (XP)</option>
+<option value="875">XPlay (XPA)</option>
+<option value="461">Xaurum (XAUR)</option>
+<option value="577">Xenixcoin (XEN)</option>
+<option value="1067">Xenon (XNN)</option>
+<option value="314">Xiaomicoin (MI)</option>
+<option value="1058">Xios (XIOS)</option>
+<option value="644">XtraBYtes (XBY)</option>
+<option value="620">YashCoin (YASH)</option>
+<option value="20">Ybcoin (YBC)</option>
+<option value="1125">Yellow Token (YEL)</option>
+<option value="634">YoGold (YOG)</option>
+<option value="341">Yocoin (YOC)</option>
+<option value="1145">ZCash Gold (ZCG)</option>
+<option value="479">ZCoin (XZC)</option>
+<option value="595">ZcCoin (ZCC)</option>
+<option value="486">Zcash (ZEC)</option>
+<option value="540">Zclassic (ZCL)</option>
+<option value="65">Zeitcoin (ZEIT)</option>
+<option value="691">ZenCash (ZEN)</option>
+<option value="1134">Zephyr (ZEPH)</option>
+<option value="27">Zetacoin (ZET)</option>
+<option value="477">Zonecoin (ZNE)</option>
+<option value="699">ZrCoin (ZRC)</option>
+<option value="1149">Zurcoin (ZUR)</option>
+<option value="778">adToken (ADT)</option>
+<option value="673">bitCNY (BITCNY)</option>
+<option value="1172">bitJob (STU)</option>
+<option value="849">district0x (DNT)</option>
+<option value="1113">eBIT (EBIT)</option>
+<option value="1190">eBitcoin Cash (EBCH)</option>
+<option value="1151">eBoost (EBST)</option>
+<option value="1105">eGold (EGOLD)</option>
+<option value="1069">eREAL (EREAL)</option>
+<option value="1103">iBTC (IBTC)</option>
+<option value="1065">iEthereum (IETH)</option>
+<option value="646">iExec RLC (RLC)</option>
+<option value="872">iQuant (IQT)</option>
+<option value="286">jl777hodl (JLH)</option>
+<option value="543">vSlice (VSL)</option>
+<option value="585">vTorrent (VTR)</option>
+<option value="253">xCash (XCASH)</option>
+<option value="780">биткоин Cash (BCH)</option>
+<option value="1">биткоина (BTC)</option>
+<option value="279">эфириум (ETH)</option>
+<option value="1">بيتكوين (BTC)</option>
+<option value="1">บิตคอยน์ (BTC)</option>
+<option value="279">イーサリアム (ETH)</option>
+<option value="486">ジーキャッシュ (ZEC)</option>
+<option value="19">ダークコイン (DASH)</option>
+<option value="5">ドージコイン (DOGE)</option>
+<option value="1">ビットコイン (BTC)</option>
+<option value="1">ビットコイン (BTC)</option>
+<option value="780">ビットコインキャッシュ (BCH)</option>
+<option value="12">フェザーコイン (FTC)</option>
+<option value="99">モナーコイン (MONA)</option>
+<option value="2">ライトコイン (LTC)</option>
+<option value="44">リップル (XRP)</option>
+<option value="18">ヴァートコイン (VTC)</option>
+<option value="279">以太坊 (ETH)</option>
+<option value="279">以太幣 (ETH)</option>
+<option value="9">合約幣 (XCP)</option>
+<option value="9">合约币 (XCP)</option>
+<option value="8">域名币 (NMC)</option>
+<option value="8">域名幣 (NMC)</option>
+<option value="66">多彩币 (XMY)</option>
+<option value="66">多彩幣 (XMY)</option>
+<option value="10">夸克币 (QRK)</option>
+<option value="10">夸克幣 (QRK)</option>
+<option value="100">恆星幣 (XLM)</option>
+<option value="100">恒星币 (XLM)</option>
+<option value="14">无限币 (IFC)</option>
+<option value="6">未來幣 (NXT)</option>
+<option value="6">未来币 (NXT)</option>
+<option value="1">比特币 (BTC)</option>
+<option value="1">比特幣 (BTC)</option>
+<option value="95">比特股 (BTS)</option>
+<option value="95">比特股 (BTS)</option>
+<option value="4">点点币 (PPC)</option>
+<option value="14">無限幣 (IFC)</option>
+<option value="5">狗币 (DOGE)</option>
+<option value="5">狗狗币 (DOGE)</option>
+<option value="5">狗狗幣 (DOGE)</option>
+<option value="44">瑞波币 (XRP)</option>
+<option value="44">瑞波幣 (XRP)</option>
+<option value="40">瑞迪币 (RDD)</option>
+<option value="40">瑞迪幣 (RDD)</option>
+<option value="18">綠幣 (VTC)</option>
+<option value="78">維理幣 (VRC)</option>
+<option value="78">维理币 (VRC)</option>
+<option value="18">绿币 (VTC)</option>
+<option value="16">美卡币 (MEC)</option>
+<option value="16">美卡幣 (MEC)</option>
+<option value="12">羽毛币 (FTC)</option>
+<option value="12">羽毛幣 (FTC)</option>
+<option value="2">莱特币 (LTC)</option>
+<option value="2">萊特幣 (LTC)</option>
+<option value="13">質數幣 (XPM)</option>
+<option value="13">质数币 (XPM)</option>
+<option value="19">达世币 (DASH)</option>
+<option value="19">達世幣 (DASH)</option>
+<option value="69">門羅幣 (XMR)</option>
+<option value="69">门罗币 (XMR)</option>
+<option value="50">黑币 (BLK)</option>
+<option value="50">黑幣 (BLK)</option>
+<option value="4">點點幣 (PPC)</option>
+<option value="44">리플코인 (XRP)</option>
+<option value="1">비트코인 (BTC)</option>
+<option value="279">이더리움 (ETH)</option></select>
+</div>
+<form id="coins-search-form" data-search-placeholder="Search Coins" action="/coins/search?locale=en" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<input type="hidden" name="query" id="query" value="" class="input-sm form-control" />
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="filter-menu desktop">
+<div class="container">
+<div class="row">
+<div class="col-md-5">
+<div class='breadcrumb'>
+<a href="/en">Chart</a> &raquo; Bitcoin Price
+</div>
+</div>
+<div class="col-md-7">
+<div class="signup-column">
+<div class='signup-text'>
+<img class="email-icon" src="https://www.coingecko.com/assets/email-icon-d53d1d4da7baafe0bbe049cbe2af1b4eac5bba514b9506023471454957e4e939.svg" alt="Email icon" />
+Easiest Way to track <span style='color: #8cc63f;'>Bitcoin</span>
+</div>
+<form action="/en/invites" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="pg0J+I7IDGfdz34dwb7WJTzjGcjIkkuJoT0z67alscG7vZPa72rxFXTu+jG7B2VbpobAb3oqhIGXTKm9OyWdMQ==" />
+<div class="input-group signup">
+<input type="text" name="email" id="email" value="" placeholder="Email address" class="input-sm form-control" />
+<span class="input-group-btn">
+<button name="button" type="submit" class="btn btn-sm btn-normal">
+<img src="https://www.coingecko.com/assets/arrow-submit-396c8a1313ca20171be818ea27cf552fa3b7ef00754104e894565300f9659351.svg" alt="Arrow submit" />
+</button> </span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="filter-menu mobile">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="signup-column">
+<div class='signup-text'>
+<img class="email-icon" src="https://www.coingecko.com/assets/email-icon-d53d1d4da7baafe0bbe049cbe2af1b4eac5bba514b9506023471454957e4e939.svg" alt="Email icon" />
+Easiest Way to track <span style='color: #8cc63f;'>Bitcoin</span>
+</div>
+<form action="/en/invites" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="FOah8F0tjlx78sLlj2uBwE9aya+z4n1fnHpY+De1VjIJVjvSPI9zLtLTRsn10jK+1T8QCAFasleqC8KuujV6wg==" />
+<div class="input-group signup">
+<input type="text" name="email" id="email" value="" placeholder="Email address" class="input-sm form-control" />
+<span class="input-group-btn">
+<button name="button" type="submit" class="btn btn-sm btn-normal">
+<img src="https://www.coingecko.com/assets/arrow-submit-396c8a1313ca20171be818ea27cf552fa3b7ef00754104e894565300f9659351.svg" alt="Arrow submit" />
+</button> </span>
+</div>
+</form>
+</div>
+</div>
+<div class="col-md-12">
+<div class='breadcrumb'>
+<a href="/en">Chart</a> &raquo; Bitcoin Price
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="container">
+<div class='unobtrusive-flash-container'></div>
+<div class='row justify-content-center mt-3'>
+<div class='mb-2 text-center'>
+<div style='height: 90px;'>
+
+<div id="bsa-zone_1509402283990-0_123456"></div>
+</div>
+</div>
+</div>
+<div class="coingecko row">
+<div class="col-md-12">
+
+<div class="coin-details row">
+<div class="col-md-7 coin-left-content">
+<div class="coin">
+<img alt="bitcoin logo (small)" src="//assets.coingecko.com/coins/images/1/small/bitcoin.png?1510040391" />
+</div>
+<div class="coin-header">
+<div class="row justify-content-center coin-image mobile text-center">
+<img alt="bitcoin logo (small)" src="//assets.coingecko.com/coins/images/1/small/bitcoin.png?1510040391" />
+</div>
+<div class="coin-name-filter">
+<div class="currency">
+Bitcoin (BTC)
+</div>
+<div class="dropdown">
+<button type="button" class="btn btn-primary coingecko dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+BTC/USD <span class="caret"></span>
+</button>
+<div class="dropdown-menu">
+<a class="dropdown-item " href="/en/price_charts/bitcoin/btc">BTC/BTC</a>
+<a class="dropdown-item disabled" href="/en/price_charts/bitcoin/usd">BTC/USD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/cad">BTC/CAD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/gbp">BTC/GBP</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/eur">BTC/EUR</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/chf">BTC/CHF</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/sek">BTC/SEK</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/jpy">BTC/JPY</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/cny">BTC/CNY</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/inr">BTC/INR</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/rub">BTC/RUB</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/aud">BTC/AUD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/hkd">BTC/HKD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/sgd">BTC/SGD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/twd">BTC/TWD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/brl">BTC/BRL</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/krw">BTC/KRW</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/zar">BTC/ZAR</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/myr">BTC/MYR</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/idr">BTC/IDR</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/nzd">BTC/NZD</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/mxn">BTC/MXN</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/php">BTC/PHP</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/dkk">BTC/DKK</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/pln">BTC/PLN</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/xau">BTC/XAU</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/xag">BTC/XAG</a>
+<a class="dropdown-item " href="/en/price_charts/bitcoin/xdr">BTC/XDR</a>
+</div>
+</div>
+</div>
+<div class="market-cap">Market Capitalization
+<span class="market-cap-num">
+<span class="currency-exchangable" data-market-cap-btc="16708287.0">
+<span>$186,032,449,954</span>
+</span> </span>
+</div>
+</div>
+</div>
+<div class="col-md-5 market-value">
+<div class="coin-value">
+<span class="currency-exchangable" data-price-btc="1.0">
+<span>$11,134.1426</span>
+</span> </div>
+<div class="live-percent-change">
+<div class="stat-percent-lg text-green">
+9.947%
+<i class="fa fa-level-up"></i>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="mobile-data">
+<div class="converter">
+<div class="converter-content text-center">
+<div class="converter-field">
+<div class="input-group">
+<span class="input-group-addon convert_from">BTC</span>
+<input type="text" name="from_amount_mobile" id="from_amount_mobile" value="" class="form-control convert from_amount" />
+</div>
+<img class="exhcange" src="https://www.coingecko.com/assets/exchange-4a65c3a727d67f246f5ccbf0173a31574f5308943ae1c2149f58bceb079ee9ca.svg" alt="Exchange" />
+<div class="input-group">
+<span class="input-group-addon convert_to">USD</span>
+<input type="text" name="to_amount_mobile" id="to_amount_mobile" value="" class="form-control convert to_amount" />
+</div>
+</div>
+<div class="convert-buttons">
+</div>
+</div>
+</div>
+<table class="daily-changes-value">
+<tbody>
+<tr>
+<td><div class="market-cap text-right">Market Cap</div></td>
+ <td><div class="market-cap text-left"><span class="market-cap-num">
+<span class="currency-exchangable" data-market-cap-btc="16708287.0">
+<span>$186,032,449,954</span>
+</span></span></div></td>
+</tr>
+<tr>
+<td><div class="market-cap text-right">24h Low / 24h High</div></td>
+<td><div class="market-cap text-left"><span class="market-cap-num">
+<span class="currency-exchangable" data-h24-low-btc="1.0" data-h24-low-usd="10089.7607020232">
+<span>$10,089.76070</span>
+</span> /
+<span class="currency-exchangable" data-h24-high-btc="1.0" data-h24-high-usd="11207.9531674652">
+<span>$11,207.95317</span>
+</span></span>
+</div></td>
+</tr>
+<tr>
+<td><div class="market-cap text-right">24 Hour Trading Volume</div></td>
+<td><div class="market-cap text-left"><span class="market-cap-num">
+<span class="currency-exchangable" data-total-volume-btc="531740.203101328">
+<span>$5,920,471,244</span>
+</span></span></div></td>
+</tr>
+</tbody>
+</table>
+<div class="other-information row">
+<div class="col-md-3">
+<div class="information-title">Complete Metrics Score<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Cumulative Score of Market Cap, Liquidity, Developer, Community, and Public Interest."></i></a></span>
+</div>
+<div class="score">Total<span class="percentage-score">95%</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="information-title">Major Exchanges Trading Activity<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Liquidity of altcoins can be used to measure its market share, market maturity, and market acceptance. 
+The coin needs to be widely traded on exchanges to be considered a potential growing coin.
+"></i></a></span>
+</div>
+<div class="score">Liquidity<span class="percentage-score">99%</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="information-title">Source Code Repository Activity<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="CoinGecko tracks the development activity of the coins via public source code repositories. 
+The reason why we are looking at this is that some coins are no longer maintained by the developer 
+thus those coins would appear very unlikely to progress over time. By looking at how much interest 
+and effort goes around the development community, there is a chance that the coin will continue to 
+innovate according to how the cryptocurrency market sees fit. (eg. Github, Bitbucket, etc.)
+"></i></a></span>
+</div>
+<div class="score">Developer<span class="percentage-score">98%</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="information-title">Social Media &amp; Discussion Board<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Cryptocurrencies tend to experience tremendous growth when there is a strong community backing it. 
+A strong community contributes to new ideas and new features to be incorporated into the coin, 
+increases trading volume, and signifies growth towards a bigger market. (eg. Reddit, Facebook, etc.)
+"></i></a></span>
+</div>
+<div class="score">Community<span class="percentage-score">94%</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="desktop-data">
+
+<table class="daily-changes-value">
+<tbody>
+<tr>
+<td>
+<div class="market-cap">
+Market Cap
+<span class="market-cap-num">
+<span class="currency-exchangable" data-market-cap-btc="16708287.0">
+<span>$186,032,449,954</span>
+</span></span>
+</div>
+</td>
+<td><div class="market-cap">24h Low / 24h High
+<span class="market-cap-num">
+<span class="currency-exchangable" data-h24-low-btc="1.0" data-h24-low-usd="10089.7607020232">
+<span>$10,089.76070</span>
+</span> /
+<span class="currency-exchangable" data-h24-high-btc="1.0" data-h24-high-usd="11207.9531674652">
+<span>$11,207.95317</span>
+</span></span>
+</div></td>
+<td><div class="market-cap">24 Hour Trading Volume
+<span class="market-cap-num">
+<span class="currency-exchangable" data-total-volume-btc="531740.203101328">
+<span>$5,920,471,244</span>
+</span></span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="other-information row">
+<div class="col-md-3">
+<div class="information-title">Complete Metrics Score<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Cumulative Score of Market Cap, Liquidity, Developer, Community, and Public Interest."></i></a></span>
+</div>
+<div class="score">Total<span class="percentage-score">95%</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="information-title">Major Exchanges Trading Activity<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Liquidity of altcoins can be used to measure its market share, market maturity, and market acceptance. 
+The coin needs to be widely traded on exchanges to be considered a potential growing coin.
+"></i></a></span>
+</div>
+<div class="score">Liquidity<span class="percentage-score">99%</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="information-title">Source Code Repository Activity<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="CoinGecko tracks the development activity of the coins via public source code repositories. 
+The reason why we are looking at this is that some coins are no longer maintained by the developer 
+thus those coins would appear very unlikely to progress over time. By looking at how much interest 
+and effort goes around the development community, there is a chance that the coin will continue to 
+innovate according to how the cryptocurrency market sees fit. (eg. Github, Bitbucket, etc.)
+"></i></a></span>
+</div>
+<div class="score">Developer<span class="percentage-score">98%</span>
+</div>
+</div>
+<div class="col-md-3">
+<div class="information-title">Social Media &amp; Discussion Board<span class="help-icon"><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Cryptocurrencies tend to experience tremendous growth when there is a strong community backing it. 
+A strong community contributes to new ideas and new features to be incorporated into the coin, 
+increases trading volume, and signifies growth towards a bigger market. (eg. Reddit, Facebook, etc.)
+"></i></a></span>
+</div>
+<div class="score">Community<span class="percentage-score">94%</span>
+</div>
+</div>
+</div>
+
+<div class="converter">
+<input type="hidden" name="conversion_rate" id="conversion_rate" value="11134.1425936633" class="conversion-rate-value" />
+<div class='row justify-content-center'>
+<div class="converter-field">
+<div class="input-group">
+<span class="input-group-addon convert_from">BTC</span>
+<input type="text" name="from_amount_regular" id="from_amount_regular" value="" class="form-control  from_amount" />
+</div>
+<img class="exhcange" src="https://www.coingecko.com/assets/exchange-4a65c3a727d67f246f5ccbf0173a31574f5308943ae1c2149f58bceb079ee9ca.svg" alt="Exchange" />
+<div class="input-group">
+<span class="input-group-addon convert_to">USD</span>
+<input type="text" name="to_amount_regular" id="to_amount_regular" value="" class="form-control  to_amount" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span id="price-chart-vs-currency" data-symbol="$" data-iso-code="USD"></span>
+
+<div class='mt-4'>
+<div class="card">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs" id='panel'>
+<li class="nav-item">
+<a class="nav-link " href="/en/coins/bitcoin#panel">Overview</a>
+</li>
+<li class="nav-item">
+<a id="tab-nav-chart-link" class="nav-link active" href="/en/price_charts/bitcoin/usd#panel">Price Chart</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="/en/coins/bitcoin/trading_exchanges#panel">Trading Exchanges</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="/en/coins/bitcoin/social#panel">Community</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="/en/coins/bitcoin/developer#panel">Developer</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="/en/coins/bitcoin/tools#panel">Tools</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="/en/coins/bitcoin/forum#panel">Discussion Forum</a>
+</li>
+</ul>
+</div>
+<div class="card-body">
+<h1 class='card-title card-title-h1'>
+Bitcoin Price Chart US Dollar
+(BTC/USD)
+</h1>
+<p>
+<b>Bitcoin price</b> for today is <b><span>$11,134.1426</span></b>.
+It has a current circulating supply of 16.7 Million coins and a total volume exchanged of <span>$5,920,471,244</span>
+</p>
+<div class='row'>
+<div class="col-md-12 filter-chart">
+<div class="btn-group mr-2" data-toggle="buttons">
+<label class="btn btn-primary coingecko active" id='chart-toggle-price'>
+<input type="radio" name="options" id="option1" autocomplete="off"> Price
+</label>
+<label class="btn btn-primary coingecko" id='chart-toggle-market-cap'>
+<input type="radio" name="options" id="option3" autocomplete="off"> Market Cap
+</label>
+</div>
+<div class="btn-group" data-toggle="buttons">
+<label class="btn btn-primary coingecko active" id='chart-mode-point'>
+<input type="radio" name="mode-chart-options" id="option3" autocomplete="off"> <i class="fa fa-circle"></i>
+</label>
+<label class="btn btn-primary coingecko" id='chart-mode-line'>
+<input type="radio" name="mode-chart-options" id="option1" autocomplete="off"> <i class="fa fa-line-chart"></i>
+</label>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class="col-md-12">
+<div class='ajax' style='height: 490px;'>
+<img class="img-auto graph-stats-loading" width="20px" height="20px" style="display:none;" src="https://www.coingecko.com/assets/loader-20-86d9029d50c95271ee19e93eaab40ca30749a7b56020e5669814873ed9f44e54.gif" alt="Loader 20" />
+<div id="coin_portfolio_price_chart_btc" class="coin_portfolio_price_chart" data-prices="[[1511864366070.02,10061.15],[1511868294197.58,10126.83],[1511868910059.3901,10174.4],[1511869499381.36,10176.64],[1511870097698.26,10243.7],[1511870704596.66,10269.44],[1511871303682.32,10228.59],[1511871428041.57,10228.59],[1511872009203.44,10228.59],[1511872615359.2998,10252.86],[1511873232879.3298,10252.86],[1511873757344.23,10207.26],[1511874353976.7202,10210.89],[1511874969300.73,10210.89],[1511875979135.45,10146.53],[1511876062862.26,10151.9],[1511876654562.1099,10139.01],[1511877259081.45,10089.76],[1511877870990.2598,10121.85],[1511878456973.9001,10156.57],[1511879073367.43,10173.23],[1511879659780.28,10163.76],[1511880265679.72,10190.73],[1511880853881.28,10185.38],[1511881467423.6702,10191.79],[1511882051166.29,10207.13],[1511882668698.3699,10176.58],[1511883246742.85,10170.76],[1511883859137.5698,10151.67],[1511884459787.3098,10187.38],[1511885074931.9302,10197.84],[1511885652497.01,10182.71],[1511886263452.16,10175.49],[1511886851590.5,10175.98],[1511887466502.51,10195.98],[1511888056511.18,10217.52],[1511888668273.68,10232.08],[1511889257922.46,10225.86],[1511889871927.98,10216.35],[1511890452430.77,10226.26],[1511891068767.2,10230.87],[1511891653316.76,10229.27],[1511892274327.49,10250.09],[1511892853626.71,10250.22],[1511893469620.3499,10253.18],[1511894057721.8499,10281.6],[1511894672339.48,10297.44],[1511895265009.1401,10278.86],[1511895867367.5598,10287.14],[1511896446720.1099,10274.6],[1511897059460.5898,10253.83],[1511897650234.1,10264.53],[1511898271059.86,10303.63],[1511898850296.8901,10276.37],[1511899472853.29,10270.77],[1511900051178.66,10267.71],[1511900670540.67,10256.39],[1511901248996.23,10243.55],[1511901872627.7102,10246.92],[1511902465360.33,10222.44],[1511903073587.99,10204.07],[1511903656713.34,10218.3],[1511904268874.1602,10225.46],[1511904853671.67,10228.41],[1511905465415.3599,10234.65],[1511906062855.52,10245.16],[1511906679079.75,10256.19],[1511907245108.8801,10269.15],[1511907870857.73,10266.32],[1511908449314.0,10271.74],[1511909071627.83,10266.58],[1511909654899.07,10258.6],[1511910272755.2,10251.87],[1511910855333.88,10250.89],[1511911470163.62,10255.75],[1511912057543.2798,10255.29],[1511912673137.31,10256.57],[1511913257197.35,10257.07],[1511913876193.6099,10267.7],[1511914451538.6902,10299.89],[1511915068784.24,10306.44],[1511915653448.8,10323.2],[1511916272854.38,10339.3],[1511916864198.4602,10329.51],[1511917464726.53,10356.52],[1511918057850.62,10417.76],[1511918647808.8,10416.43],[1511919258419.79,10478.27],[1511919868053.95,10446.84],[1511920449288.0098,10504.62],[1511921071068.93,10530.38],[1511921627070.08,10529.71],[1511922229318.1602,10507.52],[1511922832404.52,10518.91],[1511923426459.52,10528.84],[1511924038094.98,10606.02],[1511924625998.4,10664.82],[1511925238939.3499,10755.72],[1511925826562.98,10736.45],[1511926418373.69,10848.99],[1511927036251.76,10888.43],[1511927628350.09,10818.47],[1511928218349.99,10770.3],[1511928839925.72,10769.13],[1511929428228.67,10837.95],[1511930035583.17,10904.61],[1511930617632.6,10864.87],[1511931226113.21,10959.99],[1511931819739.75,10987.1],[1511932435687.83,11054.71],[1511933027756.97,11112.15],[1511933634275.65,11207.95],[1511934231473.64,11091.77],[1511934839094.1602,11129.34],[1511935421818.54,10939.87],[1511936039912.73,11003.76],[1511936632521.52,11003.76],[1511937228477.2798,11003.76],[1511937837301.77,10879.65],[1511938421212.73,10909.5],[1511939018838.0999,10913.53],[1511939629198.48,10974.13],[1511940196112.07,10925.04],[1511940824059.4102,10844.12],[1511941439588.42,10869.47],[1511942032400.5,10974.01],[1511942626992.31,11003.05],[1511942715801.21,11003.05],[1511943304791.91,11058.24],[1511943915628.47,11024.17],[1511944503020.89,11105.77],[1511945114173.51,11102.98],[1511945700889.1301,11079.93],[1511946305934.28,11080.6],[1511946902258.6,11057.26],[1511947516886.5,11051.6],[1511948112166.24,11074.55],[1511948711340.39,11118.97],[1511949304283.08,11156.74],[1511949910572.65,11151.63],[1511950503925.51,11133.82],[1511950779000,11134.14]]" data-vs-currency="usd" data-vs-currency-symbol="$" style="height:400px;"></div>
+<div class="btn-toolbar pull-right mt-3" role="toolbar">
+<div class="dropdown mr-1">
+<button type="button" class="btn btn-sm dropdown-toggle btn-outline-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Export As <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="/price_charts/export/bitcoin/usd.xls">Excel</a></a></li>
+<li><a class="dropdown-item" href="/price_charts/export/bitcoin/usd.csv">CSV</a></a></li>
+</ul>
+</div>
+<div class="btn-group">
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-24h active" data-graph-stats-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/24_hours.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/24_hours.json" data-full-graph-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/24_hours" href="javascript:;">24h</a>
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-7d" data-graph-stats-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/7_days.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/7_days.json" data-full-graph-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/7_days" href="javascript:;">7d</a>
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-14d" data-graph-stats-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/14_days.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/14_days.json" data-full-graph-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/14_days" href="javascript:;">14d</a>
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-30d" data-graph-stats-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/30_days.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/30_days.json" data-full-graph-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/30_days" href="javascript:;">30d</a>
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-60d" data-graph-stats-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/60_days.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/60_days.json" data-full-graph-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/60_days" href="javascript:;">60d</a>
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-90d" data-graph-stats-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/90_days.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/90_days.json" data-full-graph-url="https://www.coingecko.com/en/price_charts/bitcoin/usd/90_days" href="javascript:;">90d</a>
+<a class="btn btn-primary btn btn-sm graph-stats-btn graph-stats-btn-max" data-graph-stats-url="https://www.coingecko.com/en/chart/bitcoin/usd.json" data-market-cap-graph-stats-url="https://www.coingecko.com/en/market_cap/bitcoin/usd/max_days.json" data-full-graph-url="https://www.coingecko.com/en/chart/bitcoin/usd" href="javascript:;">Max</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class="col-md-8 ads text-right">
+<div class="text-center" style='height: 250px;'>
+
+<div id="bsa-zone_1509402283990-1_123456"></div>
+</div>
+</div>
+<div class='col-md-4 pl-5'>
+<table class='table'>
+<thead>
+<tr>
+<th>Date</th>
+<th>
+Price (USD)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+less than a minute ago
+</td>
+<td>11134.14</td>
+</tr>
+<tr>
+<td>
+5 minutes ago
+</td>
+<td>11133.82</td>
+</tr>
+<tr>
+<td>
+15 minutes ago
+</td>
+<td>11151.63</td>
+</tr>
+<tr>
+<td>
+25 minutes ago
+</td>
+<td>11156.74</td>
+</tr>
+<tr>
+<td>
+35 minutes ago
+</td>
+<td>11118.97</td>
+</tr>
+<tr>
+<td>
+about 1 hour ago
+</td>
+<td>11074.55</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="card-footer bg-transparent">
+<table class="table table-responsive mt-2">
+<thead>
+<tr>
+<th style='background: #fff;'>Coin</th>
+<th style='background: #fff;'>Code</th>
+<th style="text-align:right; background: #fff;">Price</th>
+<th style="text-align:right; background: #fff;">Market Cap</th>
+<th style="text-align:right; background: #fff;">Trading Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border-bottom: none;">Bitcoin</td>
+<td style="border-bottom: none;">BTC</td>
+<td style="text-align:right;border-bottom: none;">
+<span>$11,134.1426</span>
+</td>
+<td style="text-align:right;border-bottom: none;">
+<span>$186,032,449,954</span>
+</td>
+ <td style="text-align:right;border-bottom: none;">
+<span>$5,920,471,244</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<footer>
+<div class="topfooter">
+<div class="container">
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="disclaimer-icon">
+<img alt="disclaimer" src="https://www.coingecko.com/assets/disclaimer-8e54d418cc52b2c9035b439722d8d89ff19fdd06629c738bd348e805f574f337.png" />
+</div>
+<div class="disclaimer-content">
+<span class="disclaimer"><a href="/en/disclaimer">Read the Disclaimer</a></span>: Trading is a highly risky activity. Do consult your financial advisor before making any decisions. CoinGecko will not be responsible for any trading decisions.
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+</div>
+<div id="footer" class="container">
+<div class="footer-header">
+Your Favorite Altcoin Not Listed Here?
+</div>
+<div class="footer-content">
+Each week we will be adding a few new coins to this ranking. If you want to see your coin on this ranking earlier, drop us some comments and feedback at <a href="mailto:hello@coingecko.com">hello@coingecko.com</a>
+</div>
+<div class="footer-header-2">Like what we are doing? Donations are welcome!</div>
+<div class="donations row">
+<div class="col-md-6 coin-wrapper">
+<div class="footer-coin-img"><img src="https://www.coingecko.com/assets/coin-25/bitcoin-c7ba8093523032f65738012a2b26404c6db31819ea957370d48a0ba58d7768eb.png" alt="Bitcoin" /></div>
+<div class="footer-donate-link"><div class="donate-coin">Bitcoin BTC</div><a href="https://blockchain.info/address/1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd" target="_blank" rel='nofollow'>1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd</a></div>
+</div>
+<div class="col-md-6 coin-wrapper">
+<div class="footer-coin-img"><img src="https://www.coingecko.com/assets/coin-25/litecoin-8f45790a6443b906a28d3dcdce7b332368684809a0dd82e3af10487033712411.png" alt="Litecoin" /></div>
+<div class="footer-donate-link"><div class="donate-coin">Litcoin LTC</div><a href="https://live.blockcypher.com/ltc/address/LZCRywjSPCXC2d8ybWgdTjyQrq7GRg3JqB" target="_blank" rel='nofollow'>LZCRywjSPCXC2d8ybWgdTjyQrq7GRg3JqB</a></div>
+</div>
+<div class="col-md-6 coin-wrapper">
+<div class="footer-coin-img"><img src="https://www.coingecko.com/assets/coin-25/dogecoin-47ec99e86fba7d112f561a7bf09fce002848c70c03f49faff0db11fa465b8181.png" alt="Dogecoin" /></div>
+<div class="footer-donate-link"><div class="donate-coin">Dogecoin DOGE</div><a href="https://dogechain.info/address/DS3kJgp3mAdezrV5bmKKoXkUiR5tqbrAgg" target="_blank" rel='nofollow'>DS3kJgp3mAdezrV5bmKKoXkUiR5tqbrAgg</a></div>
+</div>
+<div class="col-md-6 coin-wrapper">
+<div class="footer-coin-img"><img src="https://www.coingecko.com/assets/coin-25/ethereum-bb1d95f9dc73c45c2b0aeb5eef33c8830e2bc1f7b424a2b6dcb6a07152f13c04.png" alt="Ethereum" /></div>
+<div class="footer-donate-link"><div class="donate-coin">Ethereum ETH</div><a href="https://etherscan.io/address/0x4Cdc86fa95Ec2704f0849825f1F8b077deeD8d39" target="_blank" rel='nofollow'>0x4Cdc86fa95Ec2704f0849825f1F8b077deeD8d39</a></div>
+</div>
+</div>
+</div>
+<div class="bottomfooter desktop">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="menu-footer-container">
+<ul class="menu-footer-menu">
+<li><a href="/en/disclaimer">Disclaimer</a></li>
+<li><a href="/en/terms">Terms of Service</a></li>
+<li><a href="/en/privacy">Privacy policy</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4"><div class="copyright">© 2017 CoinGecko. All Rights Reserved.</div></div>
+<div class="col-md-4">
+<div class="menu-footer-container social-media">
+Follow Us On:
+<ul class="menu-footer-menu">
+<li><a href="https://www.facebook.com/coingecko"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="http://twitter.com/coingecko"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="https://www.instagram.com/coingecko/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="https://bitcointalk.org/index.php?topic=561516.0"><i class="fa fa-btc" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottomfooter mobile">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="menu-footer-container">
+<ul class="menu-footer-menu">
+<li><a href="/en/disclaimer">Disclaimer</a></li>
+<li><a href="/en/terms">Terms of Service</a></li>
+<li><a href="/en/privacy">Privacy policy</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div class="menu-footer-container social-media">
+Follow Us On:
+<ul class="menu-footer-menu">
+<li><a href="https://www.facebook.com/coingecko"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="http://twitter.com/coingecko"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="https://www.instagram.com/coingecko/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="https://bitcointalk.org/index.php?topic=561516.0"><i class="fa fa-btc" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4"><div class="copyright">© 2017 CoinGecko. All Rights Reserved.</div></div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
