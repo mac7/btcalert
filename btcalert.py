@@ -5,7 +5,7 @@ def notify():
 	ICON_PATH = "/Home/Scripts/Btcalert/btcalert/btcusd.jpg"
 
 	#get current course
-	bitcoin = rates.fetch_bitcoin()
+	bitcoin = rates.toTheMoon()
 
 	#create D-Bus connection
 	notify2.init("Cryptocurrency rates notifier")
@@ -19,10 +19,8 @@ def notify():
 	#set timeout
 	n.set_timeout(1000)
 
-	result = '{0}-{1}'.format(*bitcoin)
-
 	#update data
-	n.update("Current rate", result)
+	n.update("Current rate BTC | USD", str(bitcoin))
 
 	#show notification
 	n.show()
