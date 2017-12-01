@@ -11,5 +11,5 @@ def toTheMoon():
 	#create soup object
 	soup = BeautifulSoup(bitcoin_file.text, "html.parser")
 
-	return round(float(str(soup.find_all("input", attrs={"id":"curPrice"})).split('"')[-2]), 2)
+	return round(float(str(soup.find_all("input", attrs={"id":"curPrice"})).split('"')[7]), 2)
 

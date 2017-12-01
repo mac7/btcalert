@@ -1,3 +1,6 @@
+#! /usr/bin/python
+
+
 import notify2
 import rates
 
