@@ -3,12 +3,10 @@
 
 import notify2
 import rates
+import time
 
 def notify():
 	ICON_PATH = "/Home/Scripts/Btcalert/btcalert/btcusd.jpg"
-
-	#get current course
-	bitcoin = rates.toTheMoon()
 
 	#create D-Bus connection
 	notify2.init("Cryptocurrency rates notifier")
@@ -19,14 +17,22 @@ def notify():
 	#set notification level
 	n.set_urgency(notify2.URGENCY_NORMAL)
 
-	#set timeout
-	n.set_timeout(1000)
+	while True:
 
-	#update data
-	n.update("Current rate BTC | USD", str(bitcoin))
+		#get current course
+        	bitcoin = rates.toTheMoon()
 
-	#show notification
-	n.show()
+		#set timeout
+		n.set_timeout(1000)
+
+		#update data
+		n.update("Current rate BTC | USD", str(bitcoin))
+
+		#show notification
+		n.show()
+
+		#delay
+		time.sleep(600)
 
 if __name__ == "__main__":
 	notify()
